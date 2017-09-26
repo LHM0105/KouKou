@@ -1,0 +1,1 @@
+require.config({baseUrl:"./",paths:{jquery:"js/jquery1.8.3"},shim:{slider:{deps:["jquery"]}}}),require(["jquery","js/slider"],function(e){e(function(){console.log(1),e(".slider").slider()})});
