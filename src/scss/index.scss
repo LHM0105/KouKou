@@ -388,27 +388,26 @@ $maincolor: #c8ae53;
                 text-align: center;
                 .link{
                     display: inline-block;
+                    
                     b{
                         float: left;
                         width: 41px;
                         height: 41px;
                         background:url(../img/bg.png) no-repeat;
+                    }
+                    
+                    .new-pic{
+                        
                         background-position: 0 -32px;
                     }
-                    .b-hover1{
+                    .hot-pic{
+                        background-position: -50px -31px;
+                    }
+                    .hui-pic{
                         width:47px;
-                        background-position: 0 -82px;
+                        background-position: -98px -32px;
                     }
                     
-                    .b-hover2{
-                        width:47px;
-                        background-position: -50px -82px;
-                    }
-                    
-                    .b-hover3{
-                        width:47px;
-                        background-position: -98px -82px;
-                    }
                     .text{
                         float: left;
                         margin-left:15px;
@@ -431,26 +430,28 @@ $maincolor: #c8ae53;
                     left:1px solid #ccc;
                     right:1px solid #ccc;
                 }
-                .link{
-                    b{
-                         background-position: -50px -31px
-                    }
-                }
             }
-            >li:nth-of-type(3){
-                .link{
-                    b{
-                        width:47px;
-                        background-position: -98px -32px
-                    }
-                }
-            } 
-            .lihover{
+
+            li:hover{
                 background: $maincolor;
+                
                 .link{
                     .text{
                         color: #fff;
                     }
+                    
+                    .new-pic{
+                        
+                        background-position: 0 -82px;
+                    }
+                    .hot-pic{
+                        background-position: -50px -82px;
+                    }
+                    .hui-pic{
+                        width:47px;
+                        background-position: -98px -82px;
+                    }
+                    
                 }
             } 
             

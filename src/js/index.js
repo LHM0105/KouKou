@@ -60,13 +60,6 @@ require(['jquery','js/slider'], function ($) {
 		$('#trend .link-list li').each(function(k,v){
 			//鼠标放上linklist
 			$(v).on('mouseenter',function(){
-				//改变li颜色
-				$(v).siblings().removeClass('lihover');
-				$(v).addClass('lihover');
-				//去除其他b的样式，给当前b标签添加样式
-				$(v).siblings().children('.link').children().eq(0).removeClass();
-				$(v).children('.link').children().eq(0).addClass('b-hover'+(k+1));
-				
 				//控制内容显示
 				$('#trend .conbox .con').css('display','none');
 				$('#trend .conbox').children('.con').eq(k).css('display','block');

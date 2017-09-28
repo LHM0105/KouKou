@@ -425,19 +425,16 @@ a > img {
   width: 41px;
   height: 41px;
   background: url(../img/bg.png) no-repeat;
+}
+.main .trend > ul > li .link .new-pic {
   background-position: 0 -32px;
 }
-.main .trend > ul > li .link .b-hover1 {
-  width: 47px;
-  background-position: 0 -82px;
+.main .trend > ul > li .link .hot-pic {
+  background-position: -50px -31px;
 }
-.main .trend > ul > li .link .b-hover2 {
+.main .trend > ul > li .link .hui-pic {
   width: 47px;
-  background-position: -50px -82px;
-}
-.main .trend > ul > li .link .b-hover3 {
-  width: 47px;
-  background-position: -98px -82px;
+  background-position: -98px -32px;
 }
 .main .trend > ul > li .link .text {
   float: left;
@@ -456,18 +453,21 @@ a > img {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-.main .trend > ul > li:nth-of-type(2) .link b {
-  background-position: -50px -31px;
-}
-.main .trend > ul > li:nth-of-type(3) .link b {
-  width: 47px;
-  background-position: -98px -32px;
-}
-.main .trend > ul .lihover {
+.main .trend > ul li:hover {
   background: #c8ae53;
 }
-.main .trend > ul .lihover .link .text {
+.main .trend > ul li:hover .link .text {
   color: #fff;
+}
+.main .trend > ul li:hover .link .new-pic {
+  background-position: 0 -82px;
+}
+.main .trend > ul li:hover .link .hot-pic {
+  background-position: -50px -82px;
+}
+.main .trend > ul li:hover .link .hui-pic {
+  width: 47px;
+  background-position: -98px -82px;
 }
 .main .trend .conbox {
   width: 1200px;
