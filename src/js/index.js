@@ -56,14 +56,14 @@ require(['jquery','js/slider'], function ($) {
 		$('.slider').slider();
 		
 		//trend部分
-		//改变li颜色
 		$('#trend .link-list li').each(function(k,v){
 			//鼠标放上linklist
 			$(v).on('mouseenter',function(){
+				//改变li样式
+				$(v).addClass('hover').siblings().removeClass();
 				//控制内容显示
 				$('#trend .conbox .con').css('display','none');
 				$('#trend .conbox').children('.con').eq(k).css('display','block');
-				
 			});
 			
 		});

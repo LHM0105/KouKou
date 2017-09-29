@@ -743,28 +743,12 @@ a > img {
 .main .imgthin a:hover {
   opacity: 0.8;
 }
-.main .imgup {
-  position: relative;
-}
-.main .imgup h4 {
-  position: absolute;
-  top: 16px;
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-}
-.main .imgup p {
-  position: absolute;
-  top: 40px;
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  color: #aaa;
-}
 .main .imgup a {
   display: block;
   width: 100%;
   transition: all 0.5s;
+  position: relative;
+  color: #000;
 }
 .main .imgup a img {
   display: block;
@@ -776,6 +760,21 @@ a > img {
 .main .imgup a .bg {
   height: 5px;
   background: darkgrey;
+}
+.main .imgup a h4 {
+  position: absolute;
+  top: 16px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+.main .imgup a p {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  color: #aaa;
 }
 .main .imgup a:hover {
   margin-top: -5px;
@@ -847,19 +846,19 @@ a > img {
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
 }
-.main .trend > ul li:hover {
+.main .trend > ul .hover {
   background: #c8ae53;
 }
-.main .trend > ul li:hover .link .text {
+.main .trend > ul .hover .link .text {
   color: #fff;
 }
-.main .trend > ul li:hover .link .new-pic {
+.main .trend > ul .hover .link .new-pic {
   background-position: 0 -82px;
 }
-.main .trend > ul li:hover .link .hot-pic {
+.main .trend > ul .hover .link .hot-pic {
   background-position: -50px -82px;
 }
-.main .trend > ul li:hover .link .hui-pic {
+.main .trend > ul .hover .link .hui-pic {
   width: 47px;
   background-position: -98px -82px;
 }
@@ -1197,6 +1196,10 @@ a > img {
   background: #BE0A2C;
   color: #fff;
   font-size: 12px;
+}
+.main .floor .two-pic .bot a:hover + span {
+  transition: all 0.5s;
+  margin-top: -5px;
 }
 .main .floor .three-pic {
   width: 390px;
