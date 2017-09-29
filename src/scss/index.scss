@@ -1,6 +1,136 @@
 @import "commons";
 @import "slider";
-$maincolor: #c8ae53;
+@import "foot";
+
+.right-barbox{
+    width:163px;
+    position: fixed;
+    z-index: 3;
+    right: -130px;
+//  right:0;
+    top: 0;
+    background:#eee;
+    .right-bar{
+        $barcolor: #2B2B2B;
+        $hovercolor: #C8AE53;
+        width:33px;
+        height:100%;
+        background:$barcolor;
+        float: left;
+        position: relative;
+        a{
+            display: block;
+            width: 33px;
+            height: 33px;
+            text-align: center;
+            position:absolute;
+        }
+        a:hover{
+            background-color: $hovercolor;
+        }
+        .login-icon{
+            background:url(../img/q_zhanghao.png) no-repeat;
+            background-position: 5px 5px;
+            bottom: 240px;
+        }
+        
+        .kefu{
+            background:url(../img/q_kefu.png) no-repeat;
+            background-position: 5px 5px;
+            bottom: 200px;
+            span{
+                position: absolute;
+                padding: 5px;
+                left:-150px;
+                display: none;
+//              left:-76px;
+                top: 0;
+                background: $hovercolor;
+            }
+        }
+        .gwc{
+            height: 80px;
+            background:url(../img/q_gouwuche.png) no-repeat;
+            background-position: 4px 0;
+            bottom: 100px;
+            span{
+                width:16px;
+                float: left;
+                margin:24px 0 0 8px;
+                font-size: 12px;
+                color: #fff;
+            }
+        }
+        .ewmicon{
+            bottom: 70px;
+            font-size: 30px;
+            color: $hovercolor;
+            .ewm{
+                position: absolute;
+//              left: 35px;
+                left: -156px;
+                top: -78px;
+                width: 160px;
+                height: 180px;
+                background: url(../img/bg.png) no-repeat;
+                background-position: -240px -644px;
+                text-align: center;
+                padding-top:10px ;
+                img{
+                    width: 95%;
+                }
+            }
+        }
+        .ewmicon:hover,.scrollup:hover{
+            color: $barcolor;
+        }
+        .scrollup{
+            font-size: 26px;
+            bottom: 30px;
+            color: $maincolor;
+        }
+    }
+    
+    .ewm-up{
+        position: absolute;
+        left:-40px;
+        bottom: 300px;
+        display: none;
+        .s-ewm{
+            width: 40px;
+            height: 40px;
+            background: #ccc url(../img/ewmicon.png) no-repeat center;
+            position: relative;
+            .bigewm{
+                position: absolute;
+                left: -156px;
+                top: -78px;
+                width: 160px;
+                height: 180px;
+                background: url(../img/bg.png) no-repeat;
+                background-position: -240px -644px;
+                text-align: center;
+                display: none;
+                .ewm-pic{
+                    width: 86%;
+                    margin:6px 0 0 -6px;
+                }
+            }
+        }
+        .s-ewm:hover{
+            background-color: $maincolor;
+            .bigewm{
+                display: block;
+            }
+        }
+        .scroll{
+            width: 40px;
+            height: 40px;
+            background: url(../img/bg.png) no-repeat;
+            background-position: 0 -585px;
+        }
+    }
+}
 .topbg{
      border-bottom: 1px solid #ccc;
     .top{
@@ -155,6 +285,9 @@ $maincolor: #c8ae53;
                         margin: 0 12px;
                         color: #000;
                         line-height: 32px;
+                    }
+                    a:hover{
+                        color: darkred;
                     }
                 }
             }
@@ -333,6 +466,18 @@ $maincolor: #c8ae53;
 .bannerbg{
     width: 100%;
     height: 480px;
+    position: relative;
+    .banner{
+        width:1200px;
+        height: 480px;
+        position: absolute;
+        left:50%;
+        margin-left:-600px;
+        top: 0;
+        a{
+            float: right;
+        }
+    }
 }
 
 .main{
@@ -350,6 +495,44 @@ $maincolor: #c8ae53;
     }
     //goods link img to be up
     .imgup{
+        position: relative;
+        h4{
+            position: absolute;
+            top: 16px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+        p{
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            font-size:12px ;
+            text-align: center;
+            color: #aaa;
+        }
+        a{
+            display: block;
+            width: 100%;
+            transition:all 0.5s;
+            img{
+                display: block;
+                width: 100%;
+                height: 205px;
+                margin: 0;
+                border: 0;
+            }
+            .bg{
+                height:5px;
+                background: darkgrey;
+            }
+        }
+        a:hover{
+            margin-top: -5px;
+            .bg{
+                background: mediumpurple;
+            }
+        }
         
     }
     //goods link img’size change
@@ -631,12 +814,502 @@ $maincolor: #c8ae53;
             }
         }
     }
-    
+    .banner{
+        width: 1200px;
+        height: 90px;
+        margin: 30px auto;
+    }
     //floor
     .floor{
         width:1200px;
         height: 430px;
         margin: 30px auto;
-        background:pink;
+        position: relative;
+        
+        .floor-icon{
+            width: 37px;
+            height: 38px;
+            position:absolute;
+            top:-4px;
+            left: 0;
+            background:url(../img/bg.png) no-repeat;
+            float: left;
+        }
+        
+        .floor-left{
+            width: 200px;
+            height: 430px;
+            float: left;
+            background:#fff;
+            .floor-tit{
+                width: 200px;
+                height: 92px;
+                background:url(../img/bg.png) no-repeat;
+                background-position:0 -462px;
+                overflow: hidden;
+                h2{
+                    font-size: 24px;   
+                    color: #fff;
+                    text-align: center;
+                    font-weight:500;
+                    margin-top: 20px;
+                }
+                p{
+                    color: #fff;
+                    text-align: center;
+                    font-size: 12px;
+                    margin-top: 10px;
+                }
+            }
+            .floor-more{
+                width: 180px;
+                height: 133px;
+                padding: 10px 20px 0 0;
+                a{
+                    float: left;
+                    width:68px;
+                    height: 32px;
+                    padding-left: 2px;
+                    margin-left: 20px;
+                    border-bottom: 1px dotted #ccc;
+                    font-size: 12px;
+                    line-height: 32px;
+                    color: #000;
+                }
+            }
+            .floor-left-pic{
+                width: 200px;
+                height: 196px;
+                margin-top:3px;
+                position: relative;
+                span{
+                    display: block;
+                    width: 14px;
+                    height: 18px;
+                    position: absolute;
+                    top:40%;
+                    margin-top:-9px;
+                    background:url(../img/bg.png) no-repeat;
+                    cursor: pointer;
+                }
+                .btn-left{
+                    left:0;
+                    background-position: 0 -367px;
+                }
+                .btn-right{
+                    right: 0;
+                    background-position: -36px -367px;
+                }
+                
+                ul{
+                    width: 96px;
+                    height: 171px;
+                    margin: 10px auto;
+                    position: relative;
+                    li{
+                        width:96px;
+                        height:171px;
+                        position: absolute;
+                        display: none;
+                        a{
+                            display: block;
+                            width: 96px;
+                            height:57px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                    .block{
+                        display: list-item;
+                    }
+                    
+                    
+                }
+            }
+        }
+        .pics{
+            float: left;
+            margin-left: 10px;
+        }
+        .one-pic{
+            width: 390px;
+            height: 430px;
+            a{
+                display: block;
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        
+        .two-pic{
+            width: 190px;
+            height: 430px;
+            .top{
+                width:190px;
+                height:210px;
+                position: relative;
+                .new{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 36px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+            .bot{
+                width: 190px;
+                height:210px;
+                padding-top: 10px;
+                position: absolute;
+                bottom: 0;
+                .hot{
+                    position: absolute;
+                    right:0;
+                    top:10px;
+                    width: 36px;
+                    height: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    background:#BE0A2C;
+                    color: #fff;
+                    font-size: 12px;
+                }
+            }
+        }
+        
+        .three-pic{
+            width: 390px;
+            height: 430px;
+            .top{
+                width: 390px;
+                height:210px;
+            }
+            .bot{
+                width: 390px;
+                height:210px;
+                padding-top: 10px;
+                .bot-left{
+                    width: 190px;
+                    height: 210px;
+                    float: left;
+                }
+                .bot-right{
+                    width: 190px;
+                    height: 210px;
+                    float: left;
+                    margin-left: 10px;
+                }
+            }
+        }
+        
     }
+    .floor1{
+        $floor-color: #BA2A7E;
+        .floor-icon{
+            background-position: -384px 0;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+        
+        
+    }
+    
+    .floor2{
+        $floor-color: #FF648C;
+        .floor-icon{
+            background-position: -384px -47px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    .floor3{
+        $floor-color: #155970;
+        .floor-icon{
+            background-position: -384px -96px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    .floor4{
+        $floor-color: #D4595E;
+        .floor-icon{
+            background-position: -384px -146px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    
+    .floor5{
+        $floor-color:#3CB38D;
+        .floor-icon{
+            background-position: -384px -196px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    
+    .floor6{
+        $floor-color:#C0A40E;
+        .floor-icon{
+            background-position: -384px -245px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    
+    .floor7{
+        $floor-color:#006FC8;
+        .floor-icon{
+            background-position: -384px -295px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    
+    .floor8{
+        $floor-color:#E93052;
+        .floor-icon{
+            background-position: -384px -345px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    
+    .floor10{
+        $floor-color:#674941;
+        .floor-icon{
+            background-position: -384px -450px;
+        }
+        .floor-left{
+            .floor-tit{
+                background-color:$floor-color;
+            }
+            .floor-more{
+                a:hover{
+                    color: $floor-color;
+                }
+            }
+        }
+        //change the color of bg (defferent floor)
+        .imgup{
+            a:hover{
+                .bg{
+                    background: $floor-color;
+                }
+            }
+        }
+        
+        .two-pic{
+            .top{
+                .new{
+                   background: $floor-color;
+                }
+            }
+        }
+    }
+    
+    
 }
+

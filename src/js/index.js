@@ -153,7 +153,96 @@ require(['jquery','js/slider'], function ($) {
 //		});
 */		
 
+		//floor中的商品logo切换
+		//向右切换
+		$('.floor-left-pic').each(function(k,v){
+			$(v).children('.btn-right').on('click',function(){
+				//获取当前显示内容的下标
+				var iIndex = $(v).children('ul').children('.block').index() + 1;
+				
+				if(iIndex >= $(v).children('ul').children().length){
+					iIndex = 0;
+				}
+				$(v).children('ul').children('li').eq(iIndex).fadeIn().addClass('block').siblings().removeClass('block').css('display','none');
+			});
+		});
+		
+//		//向左切换
+		$('.floor-left-pic').each(function(k,v){
+			$(v).children('.btn-left').on('click',function(){
+				//获取当前显示内容的下标
+				var iIndex = $(v).children('ul').children('.block').index() - 1;
+				
+				if(iIndex < 0){
+					iIndex = $(v).children('ul').children().length - 1;
+				}
+				$(v).children('ul').children('li').eq(iIndex).fadeIn().addClass('block').siblings().removeClass('block').css('display','none');
+			});
+		});
+//		//自动切换
+		$('.floor-left-pic').each(function(k,v){
+			setInterval(function(){
+				//获取当前显示内容的下标
+				var iIndex = $(v).children('ul').children('.block').index() + 1;
+				
+				if(iIndex >= $(v).children('ul').children().length){
+					iIndex = 0;
+				}
+				$(v).children('ul').children('li').eq(iIndex).fadeIn().addClass('block').siblings().removeClass('block').css('display','none');
+			},3000);
+		});
 
+
+		//侧边栏
+		$('.right-barbox').height($(window).height());
+		$(window).resize(function(){
+			
+			$('.right-barbox').height($(window).height());
+		});
+		//侧边栏--客服
+		$('.kefu').hover(function(){
+			$('.kefu span').css({
+				'display':'block',
+				'opacity':0
+			}).stop(true).animate({
+				'left':-76,
+				'opacity':1
+			},300);
+		},function(){
+			$('.kefu span').stop(true).animate({
+				'left':-150,
+				'opacity':0
+			},300).css({
+				'display':'block'
+			});
+		});
+		
+		//侧边栏---二维码
+		$('.ewmicon .ewm').hide();
+		$('.ewmicon').hover(function(){
+			$('.ewmicon .ewm').show(300);
+			
+		},function(){
+			$('.ewmicon .ewm').hide();
+
+		});
+		
+		//侧边栏--回到顶部,以及滚动到一定程度的回到顶部
+		$('.right-bar .scrollup').add($('.ewm-up .scroll')).click(function(){
+			if($(window).scrollTop() > 0){
+				$('body,html').animate({scrollTop:0},500);
+			}
+		});
+		
+		//滚动到一程度，出现回到顶部和二维码小图标
+		$(window).scroll(function(){
+			if($(window).scrollTop()>500){
+				$('.ewm-up').css('display','block');
+			}else{
+				$('.ewm-up').css('display','none');
+			}
+		});
+		
 		
 	});
 });

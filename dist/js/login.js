@@ -1,0 +1,1 @@
+require.config({baseUrl:"./",paths:{jquery:"js/jquery1.8.3"}}),require(["jquery"],function(o){o(function(){o("#footer").load("index.html #footer .footer-con","login",function(){}),o("#footer-about").load("index.html #footer-about .foot-about-con","login",function(){}),o("#footer-copy").load("index.html #footer-copy .foot-copy-con","login",function(){})})});
