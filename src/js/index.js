@@ -54,7 +54,6 @@ require(['jquery','js/slider'], function ($) {
 		
 		//轮播图插件
 		$('.slider').slider();
-		
 		//trend部分
 		$('#trend .link-list li').each(function(k,v){
 			//鼠标放上linklist
@@ -67,10 +66,10 @@ require(['jquery','js/slider'], function ($) {
 			});
 			
 		});
-		
 		//trend第二块内容区域的事件
 		//鼠标放到按钮上，按钮颜色改变
 		$('#con2-click .btn-r').on('mouseenter',function(){
+			console.log('trend');
 			$(this).css({
 				'background-position':'-180px -136px'
 			})

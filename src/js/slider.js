@@ -9,9 +9,7 @@ define(['jquery'], function (f) {
 			
 			this.oImgList = this.el.children('.img-list');
 			this.aImgList = this.el.children('.img-list').children('li');//图片集合
-			//为实现无缝切换，向ul最后再添加一次第一张图片
-			this.aImgList.eq(0).clone().appendTo(this.oImgList);
-			this.aImgList = this.el.children('.img-list').children('li');//图片集合
+
 			//获取图片宽度图片宽度就是盒子宽度
 			this.iImgW = this.el.width();
 			
@@ -29,7 +27,7 @@ define(['jquery'], function (f) {
 			
 			//添加小按钮
 			var sBtnList = '';
-			for(var i = 0;i<this.iImgNum-1;i++){
+			for(var i = 0;i<this.iImgNum;i++){
 				sBtnList += '<li>'+(i+1)+'</li>';
 			}
 			
@@ -38,18 +36,24 @@ define(['jquery'], function (f) {
 			this.el.children('.btn-list').css('margin-left',-this.el.children('.btn-list').width()/2);
 			//获取小按钮集合
 			this.aBtnList = this.el.children('.btn-list').children('li');
-			this.aBtnList.eq(0).addClass('active');
 			
-			this.aImgList.eq(0).addClass('active');
+			this.aBtnList.eq(0).addClass('active');
+			//设置第一张图片显示
+			this.aImgList.css('display','none');
+			this.aImgList.eq(0).addClass('active').css('display','list-item');
+			//设置第一张显示时的背景色
+			var bgcolor = this.el.children('.img-list').children('li').eq(0).css('background-color');
+			//改变bannerbg背景色
+			$('.bannerbg').css('background',bgcolor);
+			
 			//鼠标放上，显示切换按钮
 			this.el.hover(function(){
-				this.el.children('a').css('display','block');
+//				this.el.children('a').css('display','block');
 				clearInterval(this.iTimer);//清除自动切换的定时器
 			}.bind(this),function(){
-				this.el.children('a').css('display','none');
+//				this.el.children('a').css('display','none');
 				this.autoMove();//再次执行自动切换的方法
 			}.bind(this));
-	
 			
 			//滑过小按钮切换
 			this.el.children('.btn-list').on('mouseover','li',function(){
@@ -57,7 +61,10 @@ define(['jquery'], function (f) {
 				$(this).addClass('active').siblings().removeClass('active');
 				
 				//图片变化 
-				$(this).parent().siblings('.img-list').stop(true).animate({'left':-$(this).index()*$(this).parent().parent().width()},500).children('li').eq($(this).index()).addClass('active').siblings().removeClass('active'); 
+				$(this).parent().siblings('.img-list').children('li').eq($(this).index()).fadeIn().addClass('active').siblings().fadeOut().removeClass('active'); 
+				var bgcolor = $(this).parent().siblings('.img-list').children('li').eq($(this).index()).css('background-color');
+				//改变bannerbg背景色
+				$('.bannerbg').css('background',bgcolor);
 				
 			});
 			
@@ -66,22 +73,24 @@ define(['jquery'], function (f) {
 			this.autoMove = function(){
 				//定时器
 				this.iTimer = setInterval(function(){
-					//改变按钮显示
+
+			//改变按钮显示
 					var iBtnIndex = this.el.children('.btn-list').children('.active').index() + 1;
 					if(iBtnIndex >= this.el.children('.btn-list').children().length){
 						iBtnIndex=0;
 					}
 					//显示当前小按钮
 					this.el.children('.btn-list').children('li').eq(iBtnIndex).addClass('active').siblings().removeClass('active');
-					//改变图片显示
-					var iImgIndex = this.el.children('.img-list').children('.active').index() + 1;
-					if(iImgIndex > this.el.children('.btn-list').children().length){
-						this.el.children('.img-list').css('left',0);
-						iImgIndex=1;
-					}
-					this.el.children('.img-list').animate({'left':-iImgIndex*this.el.width()},500).children('li').eq(iImgIndex).addClass('active').siblings().removeClass('active');
-				
-				}.bind(this),5000);
+					
+					
+//					//改变图片显示
+					this.el.children('.img-list').children('li').eq(iBtnIndex).addClass('active').fadeIn().siblings().fadeOut();
+					
+					//改变bannerbg背景色
+					var bgcolor = this.el.children('.img-list').children('li').eq(iBtnIndex).css('background-color');
+					$('.bannerbg').css('background',bgcolor);
+					
+				}.bind(this),4000);
 			}
 			//执行自动切换方法
 			this.autoMove();

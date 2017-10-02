@@ -2,16 +2,20 @@
   position: relative;
   overflow: hidden;
   height: 100%;
+  width: 100%;
 }
 
 .slider .img-list {
+  width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .slider .img-list li {
   height: 100%;
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .slider .img-list li img {
   width: 100%;
@@ -35,6 +39,7 @@
   float: left;
   margin: 3px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .slider .btn-list .active {

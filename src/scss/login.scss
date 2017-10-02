@@ -1,2 +1,97 @@
 @import "commons";
 @import "foot";
+#top{
+    width: 100%;
+    height: 25px;
+    background: #666666;
+    .top-con{
+        width: 1000px;
+        height: 26px;
+        margin: 0 auto;
+        .top-left{
+            float: left;
+            color: #fff;
+            font-size: 12px;
+            line-height: 25px;
+            span{
+                margin: 0 6px;
+            }
+            a{
+                color: #fff;
+            }
+        }
+        .top-right{
+            float: right;
+            color: #fff;
+            font-size: 12px;
+            li{
+                float: left;
+                line-height: 25px;
+                margin:0 10px;
+                a{
+                    float: left;
+                    color: #fff;
+                    .home-icon{
+                        display: inline-block;
+                        
+                        width: 20px;
+                        height: 12px;
+                        background: url(../img/index_bg.png) no-repeat;
+                        background-position: 0 0;
+                    }
+                    .myclo-icon{
+                        display: inline-block;
+                        width: 14px;
+                        height: 12px;
+                        margin-left: 4px;
+                        background: url(../img/index_bg.png) no-repeat;
+                        background-position: -380px -160px;
+                        
+                    }
+                    
+                    &:hover{
+                        text-decoration: underline;
+                        .myclo-icon{
+                            background-position: -365px -158px;
+                        }
+                    }
+                }
+            }
+            .app-icon{
+                padding: 0 15px;
+                background: url(../img/index_bg.png) no-repeat;
+          
+                background-position: -270px 0;
+            }
+        }
+    }
+}
+
+#logo-out{
+    width: 100%;
+    height: 82px;
+    border-bottom: 3px solid #000;
+    
+    .logo-con{
+        width: 1000px;
+        height: 82px;
+        margin:0 auto;
+        .logo-left{
+            float: left;
+//          height: 82px;
+//          width: 100px;
+//          line-height: 82px;
+//          a{
+//              float: left;
+//          }
+        }
+        .logo-right{
+            float:right;
+//          width: 100px;
+//          line-height: 82px;
+//          img{
+//              float: right;
+//          }
+        }
+    }
+}

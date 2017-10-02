@@ -43,7 +43,7 @@
                 padding: 5px;
                 left:-150px;
                 display: none;
-//              left:-76px;
+                color: #000;
                 top: 0;
                 background: $hovercolor;
             }
@@ -422,6 +422,15 @@
                                         float: right;
                                         width:20px;
                                         font-size: 8px;
+                                      
+                                    }
+                                    &:hover{
+                                        span{
+                                            background: #AD9747;
+                                            color:#fff ;
+                                        }
+                                        background: #C8AE53;
+                                        color: #fff;
                                     }
                                 }
                                 color:grey;
@@ -474,8 +483,11 @@
         left:50%;
         margin-left:-600px;
         top: 0;
-        a{
-            float: right;
+        >a{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index:1;
         }
     }
 }

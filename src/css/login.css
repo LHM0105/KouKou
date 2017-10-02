@@ -234,3 +234,80 @@ a > img {
   text-align: center;
   line-height: 280px;
 }
+
+#top {
+  width: 100%;
+  height: 25px;
+  background: #666666;
+}
+#top .top-con {
+  width: 1000px;
+  height: 26px;
+  margin: 0 auto;
+}
+#top .top-con .top-left {
+  float: left;
+  color: #fff;
+  font-size: 12px;
+  line-height: 25px;
+}
+#top .top-con .top-left span {
+  margin: 0 6px;
+}
+#top .top-con .top-left a {
+  color: #fff;
+}
+#top .top-con .top-right {
+  float: right;
+  color: #fff;
+  font-size: 12px;
+}
+#top .top-con .top-right li {
+  float: left;
+  line-height: 25px;
+  margin: 0 10px;
+}
+#top .top-con .top-right li a {
+  float: left;
+  color: #fff;
+}
+#top .top-con .top-right li a .home-icon {
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  background: url(../img/index_bg.png) no-repeat;
+  background-position: 0 0;
+}
+#top .top-con .top-right li a .myclo-icon {
+  display: inline-block;
+  width: 14px;
+  height: 12px;
+  margin-left: 4px;
+  background: url(../img/index_bg.png) no-repeat;
+  background-position: -380px -160px;
+}
+#top .top-con .top-right li a:hover {
+  text-decoration: underline;
+}
+#top .top-con .top-right li a:hover .myclo-icon {
+  background-position: -365px -158px;
+}
+#top .top-con .top-right .app-icon {
+  padding: 0 15px;
+  background: url(../img/index_bg.png) no-repeat;
+  background-position: -270px 0;
+}
+
+#logo-out {
+  width: 100%;
+  height: 82px;
+  border-bottom: 3px solid #000;
+}
+#logo-out .logo-con {
+  width: 1000px;
+  height: 82px;
+  margin: 0 auto;
+}
+#logo-out .logo-con .logo-left {
+  float: left;
+}
