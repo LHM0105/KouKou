@@ -11,6 +11,10 @@ b {
   font-weight: 500;
 }
 
+i {
+  font-style: normal;
+}
+
 ul {
   list-style: none;
 }

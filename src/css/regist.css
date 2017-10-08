@@ -11,6 +11,10 @@ b {
   font-weight: 500;
 }
 
+i {
+  font-style: normal;
+}
+
 ul {
   list-style: none;
 }
@@ -323,10 +327,195 @@ a > img {
   padding-bottom: 21px;
   border-bottom: 1px solid #000;
 }
+#regist-out .regist .regist-left form p {
+  height: 32px;
+  position: relative;
+}
+#regist-out .regist .regist-left form p span {
+  display: block;
+  float: left;
+  width: 59px;
+  padding-right: 40px;
+  text-align: right;
+  font-size: 14px;
+  line-height: 32px;
+}
+#regist-out .regist .regist-left form p label {
+  float: left;
+}
+#regist-out .regist .regist-left form p label input {
+  float: left;
+  height: 30px;
+  border: 1px solid #D0D0D0;
+  font-size: 14px;
+}
+#regist-out .regist .regist-left form p .tishi {
+  float: left;
+  font-size: 12px;
+  line-height: 32px;
+  color: #F1756B;
+  position: absolute;
+  left: 330px;
+}
+#regist-out .regist .regist-left form p .info {
+  color: #555;
+  display: none;
+}
+#regist-out .regist .regist-left form p .ok {
+  width: 17px;
+  height: 17px;
+  margin-top: 6px;
+  background: url(../img/register_bg.png) no-repeat -179px 0;
+  display: none;
+}
 #regist-out .regist .regist-left form .zhanghao {
-  width: 527px;
   height: 32px;
   margin-top: 35px;
+}
+#regist-out .regist .regist-left form .zhanghao label input {
+  width: 219px;
+  text-indent: 5px;
+  color: #555555;
+}
+#regist-out .regist .regist-left form .zhanghao .jiance {
+  display: none;
+}
+#regist-out .regist .regist-left form .zhanghao .warn-id-empty {
+  display: none;
+}
+#regist-out .regist .regist-left form .zhanghao .warn-id-length {
+  display: none;
+  line-height: 16px;
+}
+#regist-out .regist .regist-left form .zhanghao .warn-id-type {
+  display: none;
+  line-height: 16px;
+}
+#regist-out .regist .regist-left form .mima {
+  height: 32px;
+  margin-top: 21px;
+}
+#regist-out .regist .regist-left form .mima label input {
+  width: 219px;
+  text-indent: 5px;
+}
+#regist-out .regist .regist-left form .mima .warn-psw-empty {
+  display: none;
+}
+#regist-out .regist .regist-left form .mima .warn-psw-length {
+  display: none;
+}
+#regist-out .regist .regist-left form .mima .warn-psw-type {
+  display: none;
+}
+#regist-out .regist .regist-left form .mima .warn-psw-repeat {
+  line-height: 16px;
+  display: none;
+}
+#regist-out .regist .regist-left form .pswStrenthDiv {
+  width: 160px;
+  height: 12px;
+  background: url(../img/mima_01.png) no-repeat 0 0;
+  margin: 8px 0 15px 100px;
+}
+#regist-out .regist .regist-left form .psw-sure {
+  margin: 0 0 20px 0;
+}
+#regist-out .regist .regist-left form .psw-sure label input {
+  width: 219px;
+  text-indent: 5px;
+  background: #eee;
+}
+#regist-out .regist .regist-left form .psw-sure .warn-psw-s-empty {
+  display: none;
+}
+#regist-out .regist .regist-left form .psw-sure .warn-psw-s-unequal {
+  display: none;
+}
+#regist-out .regist .regist-left form .check {
+  margin-top: 21px;
+}
+#regist-out .regist .regist-left form .check label input {
+  width: 78px;
+}
+#regist-out .regist .regist-left form .check i {
+  width: 80px;
+  height: 32px;
+  float: left;
+  margin-left: 8px;
+}
+#regist-out .regist .regist-left form .check i img {
+  width: 100%;
+  height: 100%;
+}
+#regist-out .regist .regist-left form .check > a {
+  display: block;
+  float: left;
+  width: 50px;
+  margin-left: 10px;
+  font-size: 12px;
+  color: #444;
+}
+#regist-out .regist .regist-left form .check > a span {
+  color: red;
+  width: 50px;
+  height: 16px;
+  line-height: 16px;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+}
+#regist-out .regist .regist-left form .xieyi {
+  margin-top: 23px;
+  position: relative;
+  overflow: hidden;
+}
+#regist-out .regist .regist-left form .xieyi span {
+  display: block;
+  float: left;
+  width: 59px;
+  height: 32px;
+}
+#regist-out .regist .regist-left form .xieyi input {
+  position: absolute;
+  left: -99px;
+}
+#regist-out .regist .regist-left form .xieyi label {
+  font-size: 14px;
+  padding-left: 14px;
+  background: url(../img/zhuche_bj_010.png) no-repeat 0 4px;
+}
+#regist-out .regist .regist-left form .xieyi a {
+  text-decoration: underline;
+  color: #000;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  float: left;
+}
+#regist-out .regist .regist-left form .xieyi a:hover {
+  color: blue;
+}
+#regist-out .regist .regist-left form .xieyi .checked {
+  background: url(../img/zhuche_bj_010.png) no-repeat 0 -24px;
+}
+#regist-out .regist .regist-left form .regist-btn {
+  margin-top: 30px;
+}
+#regist-out .regist .regist-left form .regist-btn span {
+  height: 32px;
+}
+#regist-out .regist .regist-left form .regist-btn input {
+  width: 132px;
+  height: 30px;
+  background: #fff;
+  border: 1px solid #C6C6C6;
+  color: #a48e5c;
+  cursor: pointer;
+}
+#regist-out .regist .regist-left form .regist-btn input:hover {
+  border: 1px solid #a48e5c;
 }
 #regist-out .regist .regist-right {
   width: 432px;
@@ -357,4 +546,78 @@ a > img {
 }
 #regist-out .regist .regist-right .right-con a:hover {
   border: 1px solid #a48e5c;
+}
+
+.maskbg {
+  width: 100%;
+  position: fixed;
+  margin-top: -110px;
+  z-index: 9;
+  background: #666;
+  opacity: 0.5;
+  display: none;
+}
+
+.xieyi-box {
+  width: 757px;
+  height: 512px;
+  border: 1px solid #ccc;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -360px;
+  margin-top: -60px;
+  background: #fff;
+  z-index: 10;
+  display: none;
+}
+.xieyi-box .xieyi-title {
+  height: 38px;
+  background: #343434;
+  border-bottom: 1px solid #464646;
+  border-top: 1px solid #464646;
+}
+.xieyi-box .xieyi-title p {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  line-height: 38px;
+  float: left;
+  width: 700px;
+}
+.xieyi-box .xieyi-title span {
+  float: right;
+  margin: 15px 20px 0 0;
+  width: 13px;
+  height: 13px;
+  background: url(../img/register_bg.png) no-repeat 0 0;
+  cursor: pointer;
+}
+.xieyi-box .xieyi-text {
+  height: 342px;
+  margin: 21px 28px 7px;
+  overflow-y: scroll;
+}
+.xieyi-box .xieyi-text p {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.xieyi-box .xieyi-foot {
+  height: 74px;
+  padding-top: 28px;
+  background: #f1f4f4;
+}
+.xieyi-box .xieyi-foot a {
+  width: 192px;
+  height: 39px;
+  display: block;
+  margin: 20px auto;
+  background: #A48E5C;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  line-height: 38px;
+  font-weight: 600;
 }
