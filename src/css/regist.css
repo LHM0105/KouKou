@@ -296,156 +296,65 @@ a > img {
   text-align: center;
 }
 
-#login-out {
+#regist-out {
   width: 100%;
-  height: 590px;
+  height: 754px;
+  background: url(../img/regsiter_bj.png) repeat-x;
 }
-#login-out .login {
-  width: 1200px;
-  height: 590px;
+#regist-out .regist {
+  width: 1000px;
+  height: 504px;
   margin: 0 auto;
-  background: url(../img/login_bj.jpg) no-repeat;
-  background-size: cover;
-  position: relative;
+  padding-top: 44px;
 }
-#login-out .login .login-con {
-  width: 483px;
-  height: 441px;
-  border: 1px solid #ccc;
-  position: absolute;
-  top: 53px;
-  right: 100px;
+#regist-out .regist .regist-left {
+  width: 565px;
+  height: 502px;
+  border: 1px solid #e5e5e5;
+  float: left;
 }
-#login-out .login .login-con form {
-  width: 483px;
-  height: 441px;
+#regist-out .regist .regist-left form {
+  width: 527px;
+  height: 329px;
+  margin: 54px 19px 0;
 }
-#login-out .login .login-con form .form-tit {
-  height: 36px;
-  border-bottom: 1px solid #ccc;
-  font-size: 14px;
-  padding: 20px 0 0 30px;
-  text-indent: 20px;
+#regist-out .regist .regist-left form .tit {
+  width: 506px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #000;
 }
-#login-out .login .login-con form .form-tit span {
+#regist-out .regist .regist-left form .zhanghao {
+  width: 527px;
+  height: 32px;
+  margin-top: 35px;
+}
+#regist-out .regist .regist-right {
+  width: 432px;
+  height: 104px;
+  float: left;
+}
+#regist-out .regist .regist-right .right-con {
+  width: 311px;
+  height: 37px;
+  margin: 70px 50px 0 60px;
+}
+#regist-out .regist .regist-right .right-con span {
   display: block;
   float: left;
-  width: 19px;
-  height: 21px;
-  background: url(../img/register_bg.png) no-repeat -253px 0;
-}
-#login-out .login .login-con form .form-con {
-  overflow: hidden;
-}
-#login-out .login .login-con form .form-con p {
-  height: 32px;
   line-height: 32px;
 }
-#login-out .login .login-con form .form-con p label {
-  width: 120px;
-  text-align: center;
-  font-size: 14px;
-  float: left;
-}
-#login-out .login .login-con form .form-con .zhanghao,
-#login-out .login .login-con form .form-con .mima {
-  margin: 35px 0 0 0;
-  position: relative;
-}
-#login-out .login .login-con form .form-con .zhanghao input,
-#login-out .login .login-con form .form-con .mima input {
-  float: left;
-  width: 219px;
-  height: 30px;
-  border: 1px solid #ccc;
-  line-height: 30px;
-  color: #555;
-  text-indent: 5px;
-}
-#login-out .login .login-con form .form-con .zhanghao span,
-#login-out .login .login-con form .form-con .mima span {
+#regist-out .regist .regist-right .right-con a {
   display: block;
-  position: absolute;
-}
-#login-out .login .login-con form .form-con .zhanghao .ok,
-#login-out .login .login-con form .form-con .mima .ok {
-  width: 17px;
-  height: 17px;
-  background: url(../img/register_bg.png) no-repeat -179px 0;
-  left: 345px;
-  top: 8px;
-  display: none;
-}
-#login-out .login .login-con form .form-con .zhanghao .warning,
-#login-out .login .login-con form .form-con .mima .warning {
-  font-size: 12px;
-  color: red;
-  left: 350px;
-  display: none;
-}
-#login-out .login .login-con form .form-con .mima {
-  margin-top: 21px;
-}
-#login-out .login .login-con form .form-con .forgetPsw {
-  margin-top: 14px;
-  width: 341px;
-}
-#login-out .login .login-con form .form-con .forgetPsw a {
-  color: #414141;
-  font-size: 12px;
   float: right;
-  text-decoration: underline;
-}
-#login-out .login .login-con form .form-con .login-p {
-  padding-left: 120px;
-  margin-top: 30px;
-}
-#login-out .login .login-con form .form-con .login-p .login-btn {
-  width: 130px;
-  height: 30px;
+  margin-right: 17px;
+  width: 134px;
+  height: 32px;
   border: 1px solid #C6C6C6;
-  background: #fff;
-  color: #a48e5c;
   font-size: 14px;
-  cursor: pointer;
+  text-align: center;
+  line-height: 32px;
+  color: #a48e5c;
 }
-#login-out .login .login-con form .form-con .login-p .login-btn:hover {
+#regist-out .regist .regist-right .right-con a:hover {
   border: 1px solid #a48e5c;
-}
-#login-out .login .login-con form .form-con .regist-p {
-  padding: 40px 50px 20px 0;
-  font-size: 12px;
-  text-align: right;
-}
-#login-out .login .login-con form .form-con .regist-p a {
-  color: red;
-  text-decoration: underline;
-}
-#login-out .login .login-con form .form-foot {
-  padding: 20px 0 0 0;
-  border-top: 1px solid #ccc;
-}
-#login-out .login .login-con form .form-foot p {
-  float: left;
-  font-size: 12px;
-  margin: -5px 20px 0 20px;
-}
-#login-out .login .login-con form .form-foot a {
-  float: left;
-}
-#login-out .login .login-con form .form-foot .qq {
-  width: 48px;
-  height: 22px;
-  background: url(../img/register_bg.png) no-repeat 0 -91px;
-}
-#login-out .login .login-con form .form-foot .weibo {
-  width: 83px;
-  height: 22px;
-  margin: 0 20px;
-  background: url(../img/register_bg.png) no-repeat -59px -91px;
-}
-#login-out .login .login-con form .form-foot .zfb {
-  width: 68px;
-  height: 22px;
-  background: url(../img/register_bg.png) no-repeat -155px -91px;
 }

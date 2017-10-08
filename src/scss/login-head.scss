@@ -1,0 +1,150 @@
+#top{
+    width: 100%;
+    height: 25px;
+    background: #666666;
+    .top-con{
+        width: 1000px;
+        height: 26px;
+        margin: 0 auto;
+        .top-left{
+            float: left;
+            color: #fff;
+            font-size: 12px;
+            line-height: 25px;
+            span{
+                margin: 0 6px;
+            }
+            a{
+                color: #fff;
+            }
+        }
+        .top-right{
+            float: right;
+            color: #fff;
+            font-size: 12px;
+
+            li{
+                float: left;
+                height: 25px;
+                line-height: 25px;
+                margin:0 10px;
+                a{
+                    float: right;
+                    color: #fff;
+                    .home-icon{
+                        display: inline-block;
+                        
+                        width: 20px;
+                        height: 12px;
+                        background: url(../img/index_bg.png) no-repeat;
+                        background-position: 0 0;
+                    }
+                    .myclo-icon{
+                        display: inline-block;
+                        width: 14px;
+                        height: 12px;
+                        margin-left: 4px;
+                        background: url(../img/index_bg.png) no-repeat;
+                        background-position: -380px -160px;
+                        
+                    }
+                    
+                    &:hover{
+                        text-decoration: underline;
+                        .myclo-icon{
+                            background-position: -365px -158px;
+                        }
+                    }
+                }
+                
+                
+            }
+            .ewm-link{
+                position: relative;
+                .ewm-box{
+                    display: none;
+                    width: 196px;
+                    height: 210px;
+                    background: url(../img/index_bg.png) no-repeat -606px -209px;
+                    position: absolute;
+                    top: 25px;
+                    left: -100px;
+                    z-index: 4;
+                    img{
+                        width: 146px;
+                        height: 146px;
+                        margin: 30px 0px 0px 24px;
+                    }
+                }
+                
+                &:hover{
+                    .ewm-box{
+                        display: block;
+                    }
+                }
+            }
+            .myKK,.collect{
+                position: relative;
+                ul{
+                    display: none;
+                    position: absolute;
+                    top: 25px;
+                    background: #666;
+                    z-index: 3;
+                    li{
+                        margin: 0;
+                        width: 100%;
+                        border-bottom:1px solid #ccc ;
+                        text-align: center;
+                        height: 30px;
+                        line-height: 30px;
+                        a{
+                            float: none;
+                        }
+                    }
+                }
+            
+                &:hover{
+                    ul{
+                        display: block;
+                    }
+                }
+            }
+            .app-icon{
+                padding: 0 15px;
+                background: url(../img/index_bg.png) no-repeat;
+                                
+                background-position: -270px 0;
+            }
+        }
+    }
+}
+
+#logo-out{
+    width: 100%;
+    height: 82px;
+    border-bottom: 3px solid #000;
+    
+    .logo-con{
+        width: 1000px;
+        height: 82px;
+        margin:0 auto;
+        .logo-left{
+            float: left;
+            height: 82px;
+            width: 100px;
+            a{
+                float: left;
+                height: 72px;
+                padding-top: 10px;
+                
+            }
+        }
+        .logo-right{
+            float:right;
+            width: 100px;
+            height: 82px;
+            line-height: 100px;
+        }
+    }
+}
