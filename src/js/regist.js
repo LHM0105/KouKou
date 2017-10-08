@@ -18,6 +18,25 @@ require(['jquery'], function ($) {
 		$('#footer-icon').load('login.html #footer-icon a');
 		
 		//注册表单部分
+		//账号输入框 获取焦点
+		$('form #userid').focus(function(){
+			//输入框文字消失
+			$(this).val('');
+			//输入框后的提示文字显示
+			$('.zhanghao .info').css('display','block');
+			
+		});
+		//失去焦点
+		$('form #userid').blur(function(){
+			//输入框文字显示
+			if($(this).val() === ''){
+				$(this).val('邮箱/用户名/手机号');
+			}
+			//输入框后的提示文字消失
+			$('.zhanghao .info').css('display','none');
+			
+		});
+		
 		//协议部分
 		$('form .xieyi').on('click','label',function(){
 			$('form .xieyi label').toggleClass('checked');
