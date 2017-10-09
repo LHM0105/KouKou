@@ -1,7 +1,7 @@
 @import "commons";
 @import "slider";
 @import "index-foot";
-
+@import "index-top";
 .right-barbox{
     width:163px;
     position: fixed;
@@ -131,99 +131,7 @@
         }
     }
 }
-.topbg{
-     border-bottom: 1px solid #ccc;
-    .top{
-        width:1200px;
-        height: 30px;
-        margin:0 auto;
-        .collect{
-            display: block;
-            float: left;
-            width:90px;
-            height:30px;
-            line-height:30px;
-            color:#000;
-            span{
-                display: block;
-                float: left;
-                width: 20px;
-                height: 30px;
-                background: url(../img/bg.png) no-repeat;
-                background-position:-120px 10px;  
-            }
-        }
-        .right{
-            float: right;
-            height:30px;
-            li{
-                float: left;
-                height:30px;
-                line-height:30px;
-                a{
-                    padding:0 18px;
-                    color: grey;
-                }
-            }
-            li:nth-of-type(2) a{
-                padding: 0 0 0 18px;
-            }
-            li:nth-of-type(3) a{
-                padding:0;
-            }
-            .phone a,.cart a
-            {
-                padding: 0 18px 0 4px;
-                span{
-                    display: block;
-                    float: left;
-                    width:20px;
-                    height:30px;
-                    background: url(../img/bg.png) no-repeat;
-                    background-position: -134px 8px;
-                }
-                
-            }
-            
-            .phone{
-                position: relative;
-                a:hover{
-                    color:goldenrod;
-                    span{
-                        background-position: -255px -24px;
-                    }
-                } 
-                a:hover+div{
-                    display: block;
-                }
-                .top-ewm{
-                    width:185px;
-                    height:150px;
-                    position: absolute;
-                    top: 26px;
-                    left: -50px;
-                    background:#fff url(../img/bg.png) no-repeat;                    
-                    background-position:-3px -642px;
-                    z-index: 2;
-                    text-align: center;
-                    padding-top:30px;
-                    cursor: pointer;
-                    display: none;
-                }
-                
-            }
-            
-            .cart a
-            {
-                span{
-                    background-position: -166px 8px;
-                }
-                
-            }
-            
-        }
-    }
-}
+
 
 .searchbg{
     width: 100%;

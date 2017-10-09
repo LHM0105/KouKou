@@ -15,7 +15,7 @@ gulp.task('rename',function(){
 
 //新建压缩重命名js文件的任务
 gulp.task('minifyJS',function(){
-	return gulp.src('./src/js/regist.js').
+	return gulp.src('./src/js/detail.js').
 	pipe(uglify()).
 	pipe(gulp.dest('./dist/js'));
 });
@@ -68,5 +68,5 @@ gulp.task('default',["minifyJS","minifySCSS",'minifyHTML','compileSCSS'],functio
 		livereload:true
 	});
 
-	gulp.watch(['./src/js/regist.js','./src/scss/*.scss','./src/*.html','./src/scss/*.scss'],['reload']);
+	gulp.watch(['./src/js/detail.js','./src/scss/*.scss','./src/*.html','./src/scss/*.scss'],['reload']);
 });
