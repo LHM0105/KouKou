@@ -94,6 +94,13 @@
                         display: none;
                         line-height: 16px;
                     }
+                    .warn-id-error{
+                        display: none;
+                        line-height: 16px;
+                    }
+                    .warn-id-email{
+                        display: none;
+                    }
                 }
                 .mima{
                     height: 32px;
@@ -132,6 +139,7 @@
                             width:219px;   
                             text-indent: 5px;
                             background: #eee;
+                            
                         }
                     }
                     .warn-psw-s-empty{
@@ -146,6 +154,7 @@
                     label{
                         input{
                             width: 78px;
+                            text-indent: 5px;
                         }
                         
                     }

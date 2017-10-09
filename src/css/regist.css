@@ -391,6 +391,13 @@ a > img {
   display: none;
   line-height: 16px;
 }
+#regist-out .regist .regist-left form .zhanghao .warn-id-error {
+  display: none;
+  line-height: 16px;
+}
+#regist-out .regist .regist-left form .zhanghao .warn-id-email {
+  display: none;
+}
 #regist-out .regist .regist-left form .mima {
   height: 32px;
   margin-top: 21px;
@@ -437,6 +444,7 @@ a > img {
 }
 #regist-out .regist .regist-left form .check label input {
   width: 78px;
+  text-indent: 5px;
 }
 #regist-out .regist .regist-left form .check i {
   width: 80px;
