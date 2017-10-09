@@ -1,0 +1,102 @@
+@import "commons";
+@import "login-head";
+@import "login-foot";
+#top{
+    .top-con{
+        width: 1200px;
+    }
+}
+
+#headbg{
+    width: 100%;
+    height: 95px;
+    .header{
+        width: 1200px;
+        height: 95px;
+        margin: 0 auto;
+        overflow: hidden;
+        .logo{
+            width: 345px;
+            height: 84px;
+            padding-top: 11px;
+            float: left;
+            a{
+                float: left;
+                width: 140px;
+                height: 72px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        
+        .search{
+            width: 468px;
+            height: 40px;
+            float: left;
+            margin: 38px 0 0 0;
+            form{
+                .secbox{
+                    float: left;
+                    width: 466px;
+                    height: 38px;
+                    padding: 1px;
+                    border: 1px solid #a48e5c;
+                    #sec-ipt{
+                        width: 400px;
+                        height: 38px;
+                        border: 0;
+                        padding: 0 3px;
+                        float: left;
+                    }
+                    #sec-btn{
+                        width: 45px;
+                        height: 36px;
+                        float: right;
+                        margin: 1px 1px 1px 0;
+                        background: url(../img/index_bg.png) no-repeat -438px 0;
+                        border: 0;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+        .shopcar{
+            width: 200px;
+            height: 37px;
+            margin: 42px 0 0 0;
+            float: right;
+            .shopcar-con{
+                width: 180px;  
+                padding-left: 20px; 
+                height:37px;
+                background: url(../img/index_bg.png) no-repeat -22px 0;
+                .shopcar-icon{
+                    float: left;
+                    width: 27px;
+                    height: 24px;
+                    margin: 5px 6px 0  0;
+                    background: url(../img/index_bg.png) no-repeat -127px -165px;
+                }
+                a{
+                    color: #141414;
+                    font-size: 14px;
+                    line-height: 36px;
+                    float: left;
+                    span{
+                        color: $maincolor;
+                    }
+                }
+                .shopcar-more{
+                    float: left;
+                    margin:15px 0 0 20px;
+                    width: 5px;
+                    height: 8px;
+                    background: url(../img/index_bg.png) no-repeat -230px 0;
+                }
+            }
+        }
+    }
+}

@@ -15,14 +15,14 @@ gulp.task('rename',function(){
 
 //新建压缩重命名js文件的任务
 gulp.task('minifyJS',function(){
-	return gulp.src('./src/js/detail.js').
+	return gulp.src('./src/js/activity.js').
 	pipe(uglify()).
 	pipe(gulp.dest('./dist/js'));
 });
 
 //新建一个压缩html文件的任务(不压缩也可以，主要是压缩css和js)
 gulp.task('minifyHTML',function(){
-	return gulp.src('./src/*.html')
+	return gulp.src('./src/activity.html')
 	.pipe(minifyhtml({
 		collapseWhitespace: true
 	}))

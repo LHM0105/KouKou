@@ -26,3 +26,7 @@ ul {
 a > img {
   border: 0;
 }
+
+input {
+  outline: none;
+}

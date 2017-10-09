@@ -304,156 +304,96 @@ input {
   text-align: center;
 }
 
-#login-out {
-  width: 100%;
-  height: 590px;
-}
-#login-out .login {
+#top .top-con {
   width: 1200px;
-  height: 590px;
+}
+
+#headbg {
+  width: 100%;
+  height: 95px;
+}
+#headbg .header {
+  width: 1200px;
+  height: 95px;
   margin: 0 auto;
-  background: url(../img/login_bj.jpg) no-repeat;
-  background-size: cover;
-  position: relative;
-}
-#login-out .login .login-con {
-  width: 483px;
-  height: 441px;
-  border: 1px solid #ccc;
-  position: absolute;
-  top: 53px;
-  right: 100px;
-}
-#login-out .login .login-con form {
-  width: 483px;
-  height: 441px;
-}
-#login-out .login .login-con form .form-tit {
-  height: 36px;
-  border-bottom: 1px solid #ccc;
-  font-size: 14px;
-  padding: 20px 0 0 30px;
-  text-indent: 20px;
-}
-#login-out .login .login-con form .form-tit span {
-  display: block;
-  float: left;
-  width: 19px;
-  height: 21px;
-  background: url(../img/register_bg.png) no-repeat -253px 0;
-}
-#login-out .login .login-con form .form-con {
   overflow: hidden;
 }
-#login-out .login .login-con form .form-con p {
-  height: 32px;
-  line-height: 32px;
-}
-#login-out .login .login-con form .form-con p label {
-  width: 120px;
-  text-align: center;
-  font-size: 14px;
+#headbg .header .logo {
+  width: 345px;
+  height: 84px;
+  padding-top: 11px;
   float: left;
 }
-#login-out .login .login-con form .form-con .zhanghao,
-#login-out .login .login-con form .form-con .mima {
-  margin: 35px 0 0 0;
-  position: relative;
-}
-#login-out .login .login-con form .form-con .zhanghao input,
-#login-out .login .login-con form .form-con .mima input {
+#headbg .header .logo a {
   float: left;
-  width: 219px;
-  height: 30px;
-  border: 1px solid #ccc;
-  line-height: 30px;
-  color: #555;
-  text-indent: 5px;
+  width: 140px;
+  height: 72px;
 }
-#login-out .login .login-con form .form-con .zhanghao span,
-#login-out .login .login-con form .form-con .mima span {
-  display: block;
-  position: absolute;
+#headbg .header .logo a img {
+  width: 100%;
+  height: 100%;
 }
-#login-out .login .login-con form .form-con .zhanghao .ok,
-#login-out .login .login-con form .form-con .mima .ok {
-  width: 17px;
-  height: 17px;
-  background: url(../img/register_bg.png) no-repeat -179px 0;
-  left: 345px;
-  top: 8px;
-  display: none;
+#headbg .header .search {
+  width: 468px;
+  height: 40px;
+  float: left;
+  margin: 38px 0 0 0;
 }
-#login-out .login .login-con form .form-con .zhanghao .warning,
-#login-out .login .login-con form .form-con .mima .warning {
-  font-size: 12px;
-  color: red;
-  left: 350px;
-  display: none;
-}
-#login-out .login .login-con form .form-con .mima {
-  margin-top: 21px;
-}
-#login-out .login .login-con form .form-con .forgetPsw {
-  margin-top: 14px;
-  width: 341px;
-}
-#login-out .login .login-con form .form-con .forgetPsw a {
-  color: #414141;
-  font-size: 12px;
-  float: right;
-  text-decoration: underline;
-}
-#login-out .login .login-con form .form-con .login-p {
-  padding-left: 120px;
-  margin-top: 30px;
-}
-#login-out .login .login-con form .form-con .login-p .login-btn {
-  width: 130px;
-  height: 30px;
-  border: 1px solid #C6C6C6;
-  background: #fff;
-  color: #a48e5c;
-  font-size: 14px;
-  cursor: pointer;
-}
-#login-out .login .login-con form .form-con .login-p .login-btn:hover {
+#headbg .header .search form .secbox {
+  float: left;
+  width: 466px;
+  height: 38px;
+  padding: 1px;
   border: 1px solid #a48e5c;
 }
-#login-out .login .login-con form .form-con .regist-p {
-  padding: 40px 50px 20px 0;
-  font-size: 12px;
-  text-align: right;
-}
-#login-out .login .login-con form .form-con .regist-p a {
-  color: red;
-  text-decoration: underline;
-}
-#login-out .login .login-con form .form-foot {
-  padding: 20px 0 0 0;
-  border-top: 1px solid #ccc;
-}
-#login-out .login .login-con form .form-foot p {
-  float: left;
-  font-size: 12px;
-  margin: -5px 20px 0 20px;
-}
-#login-out .login .login-con form .form-foot a {
+#headbg .header .search form .secbox #sec-ipt {
+  width: 400px;
+  height: 38px;
+  border: 0;
+  padding: 0 3px;
   float: left;
 }
-#login-out .login .login-con form .form-foot .qq {
-  width: 48px;
-  height: 22px;
-  background: url(../img/register_bg.png) no-repeat 0 -91px;
+#headbg .header .search form .secbox #sec-btn {
+  width: 45px;
+  height: 36px;
+  float: right;
+  margin: 1px 1px 1px 0;
+  background: url(../img/index_bg.png) no-repeat -438px 0;
+  border: 0;
+  cursor: pointer;
 }
-#login-out .login .login-con form .form-foot .weibo {
-  width: 83px;
-  height: 22px;
-  margin: 0 20px;
-  background: url(../img/register_bg.png) no-repeat -59px -91px;
+#headbg .header .shopcar {
+  width: 200px;
+  height: 37px;
+  margin: 42px 0 0 0;
+  float: right;
 }
-#login-out .login .login-con form .form-foot .zfb {
-  width: 68px;
-  height: 22px;
-  background: url(../img/register_bg.png) no-repeat -155px -91px;
+#headbg .header .shopcar .shopcar-con {
+  width: 180px;
+  padding-left: 20px;
+  height: 37px;
+  background: url(../img/index_bg.png) no-repeat -22px 0;
+}
+#headbg .header .shopcar .shopcar-con .shopcar-icon {
+  float: left;
+  width: 27px;
+  height: 24px;
+  margin: 5px 6px 0  0;
+  background: url(../img/index_bg.png) no-repeat -127px -165px;
+}
+#headbg .header .shopcar .shopcar-con a {
+  color: #141414;
+  font-size: 14px;
+  line-height: 36px;
+  float: left;
+}
+#headbg .header .shopcar .shopcar-con a span {
+  color: #c8ae53;
+}
+#headbg .header .shopcar .shopcar-con .shopcar-more {
+  float: left;
+  margin: 15px 0 0 20px;
+  width: 5px;
+  height: 8px;
+  background: url(../img/index_bg.png) no-repeat -230px 0;
 }
