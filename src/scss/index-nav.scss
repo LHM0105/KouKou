@@ -1,0 +1,156 @@
+
+.navbg{
+    height:40px;
+    .nav{
+        height: 40px;
+        width: 1200px;
+        margin:0 auto;
+        >ul{
+            height: 40px;
+            font-size: 14px;
+            >li{
+                float: left;
+                height: 40px;
+                line-height: 40px;
+                color: #ccc;
+                >a{
+                    float: left;
+                    padding: 0 30px;
+                    color: #000;
+                    font-weight: 600;
+                }
+                
+            }
+            .last{
+                position: relative;
+                img{
+                    position: absolute;
+                    top:-8px;
+                    left:50px;
+                }
+            }
+            .allgoods{
+                width: 222px;
+                background: $maincolor;
+                color: #fff;
+                font-weight:600;
+                text-align: center;
+                position: relative;
+//              &:hover{
+//                  >ul{
+//                      display: block;
+//                  }
+//              }
+                >ul{
+//                  display: none;
+                    height: 480px;
+                    width: 222px;
+                    background: #464645;
+                    position: absolute;
+                    top: 40px;
+                    left: 0;
+                    z-index: 2;
+                    >li{
+                        width:222px;
+                        height: 40px;
+                        text-align: left;
+                        font-weight: 500;
+                        >span{
+                            display: block;
+                            float: left;
+                            padding: 0 10px;
+                        }
+                        >a{
+                            color: #fff;
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+                        .icon-zhankai{
+                            float: right;
+                            font-size: 18px;
+                            right: 0;
+                        }
+                        .icon-zhankai1{
+                            font-size:8px;
+                            right: 0;
+                            float: right;
+                            display: none;
+                        }
+                        .moregoods{
+                            display: none;
+                            width:470px;
+                            height:450px;
+                            padding:30px 30px 0 30px;
+                            position: absolute;
+                            left: 222px;
+                            top:0;
+                            background: rgba(255,255,255,.8);
+                            overflow:auto;
+                            
+                            .title{
+                                text-align: center;
+                                overflow: hidden;
+                                li{
+                                    
+                                    float: left;
+                                    padding-left: 10px;
+                                    height: 26px;
+                                    background: #333;
+                                    margin: 0 20px 0 0;
+                                    line-height: 26px;
+                                    color: #fff;
+                                    span{
+                                        background:#555555 ;
+                                        float: right;
+                                        width:20px;
+                                        font-size: 8px;
+                                      
+                                    }
+                                    &:hover{
+                                        span{
+                                            background: #AD9747;
+                                            color:#fff ;
+                                        }
+                                        background: #C8AE53;
+                                        color: #fff;
+                                    }
+                                }
+                                color:grey;
+                            }
+                            .floor{
+                                border-bottom:1px solid #ccc ;
+                                
+                                h5{
+                                    color: $maincolor;
+                                    text-align: left;
+                                    font-size: 14px;
+                                }
+                                .links{
+                                    overflow: hidden;
+                                    color: #000;
+                                    font-size: 12px;
+                                    text-align: left;
+                                    a:nth-of-type(1){
+                                        margin-left:0;
+                                    }
+                                    a{
+                                        margin: 0 5px;
+                                        font-weight: 500;
+                                        color: #000;
+                                    }
+                                    a:hover{
+                                        text-decoration: underline;
+                                        color: $maincolor;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .active{
+                        background: $maincolor;
+                    }
+                }
+            }
+        }
+    }
+}

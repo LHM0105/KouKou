@@ -3,6 +3,10 @@ html, body, header, footer, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, img, p, 
   padding: 0;
 }
 
+body {
+  font-family: "Microsoft YaHei",Arial, Helvetica, sans-serif;
+}
+
 a {
   text-decoration: none;
 }

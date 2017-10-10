@@ -3,6 +3,10 @@ html, body, header, footer, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, img, p, 
   padding: 0;
 }
 
+body {
+  font-family: "Microsoft YaHei",Arial, Helvetica, sans-serif;
+}
+
 a {
   text-decoration: none;
 }
@@ -304,8 +308,34 @@ input {
   text-align: center;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #top .top-con {
   width: 1200px;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: skewY(0);
+  }
+  50% {
+    transform: skewY(20deg);
+  }
+  100% {
+    transform: skewY(0);
+  }
+}
+.animate1 img {
+  animation: animate1 1s cubic-bezier(0.55, 1.47, 0.52, -0.24);
+}
+
+.animate0 {
+  transition: all 0.5s cubic-bezier(0.55, 1.51, 0.56, -0.4);
+}
+.animate0:hover {
+  transform: scale(0.8);
 }
 
 #headbg {
@@ -352,6 +382,7 @@ input {
   border: 0;
   padding: 0 3px;
   float: left;
+  color: #ccc;
 }
 #headbg .header .search form .secbox #sec-btn {
   width: 45px;
@@ -396,4 +427,107 @@ input {
   width: 5px;
   height: 8px;
   background: url(../img/index_bg.png) no-repeat -230px 0;
+}
+
+#main-bg {
+  width: 100%;
+  height: 6391px;
+}
+#main-bg .main-box {
+  width: 1920px;
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+}
+#main-bg .main-box .main-tit {
+  height: 745px;
+  width: 100%;
+  background: url(../img/bg_01.jpg) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#main-bg .main-box .main-tit .text-pic {
+  position: absolute;
+  right: 18%;
+  top: 10%;
+}
+#main-bg .main-box .goods-box {
+  height: 972px;
+  width: 100%;
+  background: url(../img/bg_02.jpg) no-repeat;
+  background-size: cover;
+}
+#main-bg .main-box .goods-box .goods-con {
+  width: 1020px;
+  height: 896px;
+  margin: 0 auto;
+}
+#main-bg .main-box .goods-box .goods-con .goods-top {
+  height: 353px;
+  width: 690px;
+  margin-left: 300px;
+}
+#main-bg .main-box .goods-box .goods-con .goods-top a img {
+  margin: 40px 0 0 340px;
+}
+#main-bg .main-box .goods-box .goods-con .goods-bot {
+  width: 660px;
+  height: 353px;
+  margin-top: 190px;
+}
+#main-bg .main-box .main-sf {
+  background: url(../img/bg_03.jpg) no-repeat;
+  height: 923px;
+}
+#main-bg .main-box .main-sf .sf {
+  height: 956px;
+}
+#main-bg .main-box .main-rs {
+  background: url(../img/bg_04.jpg) no-repeat;
+  height: 926px;
+}
+#main-bg .main-box .main-rs .rs {
+  height: 926px;
+}
+#main-bg .main-box .main-fs {
+  background: url(../img/bg_05.jpg) no-repeat;
+  height: 1009px;
+}
+#main-bg .main-box .main-fs .fs {
+  height: 1009px;
+}
+#main-bg .main-box .main-fs .fs .fs-top a img {
+  margin: 50px 0 0 340px;
+}
+#main-bg .main-box .main-fs .fs .fs-bot {
+  margin-top: 310px;
+}
+#main-bg .main-box .main-eyebrow {
+  height: 996px;
+  background: url(../img/bg_06.jpg) no-repeat;
+}
+#main-bg .main-box .main-eyebrow .eyebrow {
+  height: 856px;
+}
+#main-bg .main-box .main-eyebrow .eyebrow .eyebrow-top a img {
+  margin: 0 0 0 340px;
+}
+#main-bg .main-box .main-mouth {
+  height: 820px;
+  background: url(../img/bg_07.jpg) no-repeat;
+  position: relative;
+}
+#main-bg .main-box .main-mouth .mouth .mouth-top {
+  margin-left: 280px;
+}
+#main-bg .main-box .main-mouth .mouth .mouth-top a img {
+  margin: 100px 0 0 340px;
+}
+#main-bg .main-box .main-mouth .scroll-up {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  bottom: 100px;
 }

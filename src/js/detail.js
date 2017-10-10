@@ -34,9 +34,8 @@ require(['jquery'], function ($) {
 	});
 	//回到顶部
 	$('#scroll .scroll').click(function(){
-		console.log(1);
 		if($(window).scrollTop() > 0){
-			$('body,html').animate({scrollTop:0},500);
+			$('html').animate({scrollTop:0},500);
 		}
 	});
 	
