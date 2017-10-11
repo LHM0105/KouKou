@@ -525,6 +525,7 @@ input {
   width: 14px;
   height: 14px;
   margin-top: 5px;
+  cursor: pointer;
 }
 #shopcart .shopcart-con .shopcart-con0 table tbody tr .goods-num .num-box .differ {
   background-position: 0px -167px;

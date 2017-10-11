@@ -49,8 +49,20 @@ require(['jquery'], function ($) {
 			    	//追加到页面
 			    	$('#shopcart .shopcart-con .shopcart-con0').append(obj);
 			    }
+			    
+			    //点击改变商品数量
+			    $('.num-box .add').click(function(){
+			    	var nextNum = parseInt($(this).siblings('.goos-num').val()) + 1;
+			    	$(this).siblings('.goos-num').val(nextNum);
+			    });
+			    $('.num-box .differ').click(function(){
+			    	var nextNum = parseInt($(this).siblings('.goos-num').val()) - 1;
+			    	if(nextNum < 1){
+			    		nextNum = 1;
+			    	}
+			    	$(this).siblings('.goos-num').val(nextNum);
+			    });
 			});
-			
 			
 		});
 });
