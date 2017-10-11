@@ -2,8 +2,341 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>扣扣网-我的订单</title>
+		<link rel="stylesheet" type="text/css" href="css/myorder.css"/>
+		<script src="js/requireJs.js" data-main = "js/myorder"></script>
+		
 	</head>
 	<body>
+		<!--顶部（从登陆页加载）-->
+		<!--这里的内容宽度是1200px,比登陆页大，样式在css中重写-->
+		<div id="top"></div>
+		<!--头部-->
+		<div id="headbg">
+			<div class="header">
+				<div class="logo">
+					<a href="index.html"><img src="img/logo0.png" /></a>
+				</div>
+				<div class="search">
+					<form action="javascript:;" method="get">
+						<div class="secbox">
+							<p class="text">商品<b></b></p>
+							<input type="text" value="" name="sec-ipt" id="sec-ipt" />
+							<input type="submit" value="" id="sec-btn"/>
+						</div>
+						<!--<div class="secbox0">
+							<input type="button" value="" name="sec0" id="sec0" />
+						</div>-->
+					</form>
+				</div>
+				<div class="shopcar">
+					<div class="shopcar-con">
+						<span class="shopcar-icon"></span>
+						<a href="javascript:;">
+							我的购物车<span>（</span><span class="shopcar-num">0</span><span>）</span>
+						</a>
+						<span class="shopcar-more"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--主要部分-->
+		<div id="myorder-out">
+			<div class="myorder">
+				<div class="myorder-top">
+					<a href="index.html">抠抠首页</a>
+					<span>></span>
+					<a class="personal" href="#">个人中心</a>
+				</div>
+				<div class="myorder-bottom">
+					<div class="bot-l">
+						<h2>个人中心</h2>
+						<div class="photo">
+							<img src="img/personal_pic.png" />
+						</div>
+						<div class="jy">
+							<h3>交易管理</h3>
+							<dl>
+								<dt>我的订单<b></b></dt>
+								<dd><a href="#">机票订单</a></dd>
+								<dd><a href="#">我的收藏</a></dd>
+							</dl>
+						</div>
+						<div class="kf">
+							<h3>客服服务</h3>
+							<dl>
+								<dd><a href="#">我的评论</a></dd>
+							</dl>
+						</div>
+						<div class="manage-info">
+							<h3>个人信息管理</h3>
+							<dl>
+								<dd><a href="#">安全设置</a></dd>
+								<dd><a href="#">收货地址</a></dd>
+								<dd><a href="#">我的优惠券</a></dd>
+							</dl>
+						</div>
+					</div>
+					<div class="bot-r">
+						<div class="myorder-tit">
+							<ul>
+								<li class="hover">所有订单</li>
+								<li>待付款<span>（3）</span></li>
+								<li>待发货<span>（0）</span></li>
+								<li>待收货<span>（0）</span></li>
+								<li>待评价<span>（0）</span></li>
+							</ul>
+						</div>
+						<div class="myorder-con">
+							<form action="javascript:;">
+								<div class="search-out">
+									<div class="search">
+										<!--<form action="javascript:;">-->
+										<div class="form">
+											<input type="text" value="" class="sec-ipt" />
+											<input type="submit" value="查询" class="sec-btn" />
+										</div>
+										<!--</form>-->
+										<a id="search1" class="search1" href="javascript:;">更多筛选条件<b></b></a>
+									</div>
+									<div class="search0">
+										<!--<form action="javascript:;">-->
+											<div class="left">
+												<dl class="dl1">
+													<dt>商品名称：</dt>
+													<dd>
+														<input type="text" name="g-name" class="g-name"/>
+													</dd>
+												</dl>
+												<dl class="dl2">
+													<dt>成交时间：</dt>
+													<dd>
+														<input type="text" name="s-date" value=""/>
+														<span>-</span>
+														<input type="text" name="e-date" value=""/>
+													</dd>
+												</dl>
+												<dl class="dl3">
+													<dt>商家名称：</dt>
+													<dd>
+														<input type="text" name="store-name" />
+													</dd>
+												</dl>
+												<dl class="dl4 select">
+													<dt>评价状态：</dt>
+													<dd>
+														<input type="text" disabled="disabled" value="全部" />
+														<ul id="pj-status">
+															<li>全部</li>
+															<li>已评价</li>
+															<li>未评价</li>
+														</ul>
+													</dd>
+												</dl>
+												<dl class="dl5 select">
+													<dt>交易状态：</dt>
+													<dd>
+														<input type="text" disabled="disabled" value="全部" />
+														<ul id="jy-status">
+															<li>全部</li>
+															<li>待付款</li>
+															<li>交易成功</li>
+															<li>交易取消</li>
+															<li>交易失败</li>
+														</ul>
+													</dd>
+												</dl>
+												<dl class="dl6 select">
+													<dt>售后服务：</dt>
+													<dd>
+														<input type="text" disabled="disabled" value="全部" />
+														<ul id="sh-status">
+															<li>全部</li>
+															<li>已投诉</li>
+															<li>投诉中</li>
+														</ul>
+													</dd>
+												</dl>
+											</div>
+											<div class="right">
+												<input type="submit" value="查询" class="sub" />
+												<a href="javascript:;" id="search0">精简筛选条件<span></span></a>
+												
+											</div>
+										<!--</form>-->
+									</div>
+								</div>
+								<div class="myorderbox">
+									<table>
+										<thead>
+											<tr class="form-nav">
+												<td>商品图片</td>
+												<td>商品名称</td>
+												<td>单价/数量</td>
+												<td>商品操作</td>
+												<td>小计（元）</td>
+												<td>待付款</td>
+												<td>交易操作/合计</td>
+											</tr>
+											<tr class="chose-pay">
+												<td colspan="7">
+													<label for="choseall"><input type="checkbox" name="choseall" id="choseall" class="choseall"/>全选</label>
+													<input type="button" value="合并付款" id="payall" name="payall" class="payall"/>
+												</td>
+											</tr>
+										</thead>
+										<!--一家店-->
+										<tbody>
+											<tr class="tbody-tit">
+												<td colspan="2">
+													<input type="checkbox" name="chosed" />
+													<span>订单号<b>2017101120486534014</b></span>
+												</td>
+												<td class="store" colspan="2">
+													<a href="#">伊惠连旗舰店</a>
+												</td>
+												<td class="time" colspan="3">
+													<span>下单时间<b>2017-10-11 15:05:56</b></span>
+												</td>
+											</tr>
+											<!--一个商品-->
+											<tr class="tbody-con">
+												<td colspan="4" class="td1">
+													<div class="goods last-goods">
+														<div class="goods-pic">
+															<img src="img/s_14607024866491.jpg" />
+														</div>
+														<div class="goods-text">
+															<h4>yihl/伊惠连春新款蕾丝连衣裙女加绒修身加厚连衣</h4>
+															<p>
+																<span class="size">尺码:<b>XL/170</b></span>
+																<span class="color">颜色分类:<b>白色</b></span>
+															</p>
+															<p class="icons">
+																<i class="zhi"></i>
+																<i class="zhen"></i>
+																<i class="zheng"></i>
+															</p>
+														</div>
+														<div class="solo-price">
+															<p class="now-p">￥<span>112</span></p>
+															<p class="old-p">￥<span>223</span></p>
+														</div>
+													</div>
+												</td>
+												<td class="td2">
+													<p class="price">￥<span>715.00</span></p>
+													<p class="kuaidi">（含快递：<b>0.00</b>元）</p>
+							
+												</td>
+												<td class="td3">
+													<a href="#">待付款</a>
+													<a href="#">查看订单</a>
+												</td>
+												<td class="td4">
+													<input type="button" value="立即支付" name="paynow" />
+													<a href="#">取消订单</a>
+												</td>
+											</tr>
+										</tbody>
+										<!--空白，表格内部无法用margin-->
+										<tbody class="block">
+											<tr><td></td></tr>
+										</tbody>
+										
+										<!--第二家旗舰店的商品-->
+										<tbody>
+											<tr class="tbody-tit">
+												<td colspan="2">
+													<input type="checkbox" name="chosed" />
+													<span>订单号<b>2017101120486534014</b></span>
+												</td>
+												<td class="store" colspan="2">
+													<a href="#">伊惠连旗舰店</a>
+												</td>
+												<td class="time" colspan="3">
+													<span>下单时间<b>2017-10-11 15:05:56</b></span>
+												</td>
+											</tr>
+											<!--一个商品-->
+											<tr class="tbody-con">
+												<td colspan="4" class="td1">
+													<div class="goods">
+														<div class="goods-pic">
+															<img src="img/s_14607024866491.jpg" />
+														</div>
+														<div class="goods-text">
+															<h4>yihl/伊惠连春新款蕾丝连衣裙女加绒修身加厚连衣</h4>
+															<p>
+																<span class="size">尺码:<b>XL/170</b></span>
+																<span class="color">颜色分类:<b>白色</b></span>
+															</p>
+															<p class="icons">
+																<i class="zhi"></i>
+																<i class="zhen"></i>
+																<i class="zheng"></i>
+															</p>
+														</div>
+														<div class="solo-price">
+															<p class="now-p">￥<span>112</span></p>
+															<p class="old-p">￥<span>223</span></p>
+														</div>
+													</div>
+													<!--同一家店的第二件商品-->
+													<!--每家店的最后一件商品没有下边框-->
+													<div class="goods  last-goods">
+														<div class="goods-pic"><img src="img/s_14607024866491.jpg" /></div>
+														<div class="goods-text">
+															<h4>yihl/伊惠连春新款蕾丝连衣裙女加绒修身加厚连衣</h4>
+															<p>
+																<span class="size">尺码:<b>XL/170</b></span>
+																<span class="color">颜色分类:<b>白色</b></span>
+															</p>
+															<p class="icons">
+																<i class="zhi"></i>
+																<i class="zhen"></i>
+																<i class="zheng"></i>
+															</p>
+														</div>
+													</div>
+												</td>
+												<td class="td2">
+													<p class="price">￥<span>715.00</span></p>
+													<p class="kuaidi">（含快递：<b>0.00</b>元）</p>
+							
+												</td>
+												<td class="td3">
+													<a href="#">待付款</a>
+													<a href="#">查看订单</a>
+												</td>
+												<td class="td4">
+													<input type="button" value="立即支付" name="paynow" />
+													<a href="#">取消订单</a>
+												</td>
+											</tr>
+										</tbody>
+										
+										<!--表格底部-->
+										<tfoot>
+											<tr class="chose-pay">
+												<td colspan="7">
+													<label for="choseall"><input type="checkbox" name="choseall" id="choseall" class="choseall"/>全选</label>
+													<input type="button" value="合并付款" id="payall" name="payall" class="payall"/>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+							
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--底部（从登陆页加载）-->
+		<div id="footer-out"></div>
+		<div id="footer-service"></div>
+		<div id="footer-copyright"></div>
 	</body>
 </html>

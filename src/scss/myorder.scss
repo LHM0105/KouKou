@@ -1,0 +1,617 @@
+@import "commons";
+@import "login-head";
+@import "login-foot";
+body{
+    background: #fafafa ;
+}
+#headbg{
+    width: 100%;
+    height: 95px;
+    background: #fff;
+    .header{
+        width: 1000px;
+        height: 95px;
+        margin: 0 auto;
+        overflow: hidden;
+        .logo{
+            width: 113px;
+            height: 68px;
+            padding: 11px 128px 16px 24px;
+            float: left;
+            a{
+                float: left;
+                width: 140px;
+                height: 72px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        
+        .search{
+            width: 468px;
+            height: 40px;
+            float: left;
+            margin: 38px 0 0 0;
+            form{
+                .secbox{
+                    float: left;
+                    width: 466px;
+                    height: 38px;
+                    padding: 1px;
+                    border: 1px solid #a48e5c;
+                    .text{
+                        float: left;
+                        font-size: 12px;
+                        line-height: 38px;
+                        padding: 0 6px;
+                        b{
+                            display: block;
+                            float: right;
+                            width: 6px;
+                            height: 6px;
+                            background:url(../img/index_bg.png) no-repeat;
+                            background-position: -388px 0px;
+                            margin:16px 0 0 6px;
+                        }
+                        &:hover{
+                            b{
+                                background-position: -375px 0px;
+                                margin-top: 18px;
+                            }
+                        }
+                    }
+                    #sec-ipt{
+                        width: 360px;
+                        height: 38px;
+                        border: 0;
+                        border-left:1px solid $maincolor;
+                        padding: 0 3px;
+                        float: left;
+                        color: #ccc;
+                    }
+                    #sec-btn{
+                        width: 45px;
+                        height: 36px;
+                        float: right;
+                        margin: 1px 1px 1px 0;
+                        background: url(../img/index_bg.png) no-repeat -438px 0;
+                        border: 0;
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+        }
+        .shopcar{
+            width: 200px;
+            height: 37px;
+            margin: 42px 0 0 0;
+            float: right;
+            .shopcar-con{
+                width: 180px;  
+                padding-left: 20px; 
+                height:37px;
+                background: url(../img/index_bg.png) no-repeat -22px 0;
+                .shopcar-icon{
+                    float: left;
+                    width: 27px;
+                    height: 24px;
+                    margin: 5px 6px 0  0;
+                    background: url(../img/index_bg.png) no-repeat -127px -165px;
+                }
+                a{
+                    color: #141414;
+                    font-size: 14px;
+                    line-height: 36px;
+                    float: left;
+                    span{
+                        color: $maincolor;
+                    }
+                }
+                .shopcar-more{
+                    float: left;
+                    margin:15px 0 0 20px;
+                    width: 5px;
+                    height: 8px;
+                    background: url(../img/index_bg.png) no-repeat -230px 0;
+                }
+            }
+        }
+    }
+}
+#myorder-out{
+    width: 100%;
+    overflow: hidden;
+    background: #fafafa url(../img/personal.png) repeat-x top;
+    .myorder{
+        width: 1000px;
+        margin:0 auto;
+        .myorder-top{
+            width: 1000px;
+            height: 50px;
+            padding-top: 11px;
+            line-height: 40px;
+            a{
+                font-size: 14px;
+                color: #404040;
+            }
+            .personal{
+                font-weight: 600;
+            }
+        }
+        .myorder-bottom{
+            .bot-l{
+                float: left;
+                width: 198px;
+                height: 604px;
+                border:1px solid #404040;
+                background: #fff;
+                h2{
+                    height: 40px;
+                    text-align: center;
+                    font-size: 16px;
+                    color: $maincolor;
+                    font-weight: 600;
+                    line-height: 40px;
+                    background: #000;
+                }
+                div{
+                    h3{
+                        height: 32px;   
+                        line-height: 32px;
+                        background: #AEAEB0;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    dl{
+                        padding: 8px 0;
+                        dd{
+                            height: 32px;
+                            margin-bottom: 8px;
+                            line-height: 32px;
+                            text-align: center;
+                            font-size: 16px;
+                            a{
+                                color: #404040;
+                            }
+                        }
+                    }
+                }
+                .jy{
+                    dl{
+                        dt{
+                            font-size: 16px;
+                            background: #000;
+                            color: $maincolor;
+                            text-align: center;
+                            height: 32px;
+                            line-height: 32px;
+                            margin-bottom: 8px;
+                            b{
+                                width: 5px;
+                                height: 9px;
+                                padding-left: 8px;
+                                display: inline-block;
+                                background: url(../img/personal_bg.png) no-repeat 8px -138px;
+                                
+                            }
+                        }
+                    }
+                }
+                .photo{
+                    width: 97px;
+                    height: 97px;
+                    margin: 22px 50px;
+                    
+                    img{
+                        width: 91px;
+                        height: 91px;
+                        margin: 3px;
+                    }
+                }
+            }
+            .bot-r{
+                float: right;
+                border:1px solid #CCCCCC;
+                border-top: 2px solid #CCCCCC;
+                width:788px;
+                background: #fff;
+                .myorder-tit{
+                    height: 37px;
+                    border-bottom: 1px solid #ccc; 
+                    background: #f8f8f8;
+                    ul{
+                        float: left;
+                        li{
+                            float: left;
+                            height: 37px;
+                            width: 109px;
+                            background:url(../img/myorder_line.jpg) no-repeat right;
+                            font-size: 14px;
+                            text-align: center;
+                            line-height: 37px;
+                            cursor: pointer;
+                            span{
+                                color: orangered;
+                            }
+                        }
+                        .hover{
+                            border-top:#000000 solid 2px;
+                            border-bottom: #fff solid 1px;
+                            margin-top: -2px;
+                            background: #fff;
+                        }
+                    }
+                }
+                
+                .myorder-con{
+                    width: 770px;
+                    padding: 0 9px 50px;
+                    .search-out{
+                        position: relative;
+//                      overflow: hidden;
+                        float: left;
+                        
+                        .search{
+//                          display: none;
+                            width: 770px;
+                            padding: 21px 0;
+                            border-bottom: 1px solid #EEEEEE; 
+                            overflow: hidden;
+                            margin-bottom: 30px;
+                            .form{
+                                float: left;
+                                .sec-ipt{
+                                    width: 158px;
+                                    height: 22px;
+                                    float: left;
+                                    margin-right: 17px;
+                                }
+                                .sec-btn{
+                                    margin-right: 17px;
+                                    width: 63px;
+                                    height: 25px;
+                                    background: $maincolor;
+                                    color: #fff;
+                                    line-height: 25px;
+                                    text-align: center;
+                                    border: 0;
+                                }
+                            }
+                            .search1{
+                                font-size: 12px;
+                                color: royalblue;
+                                float: left;
+                                margin-top: 4px;
+                                b{
+//                                  display: block;
+                                    width: 9px;
+                                    height: 5px;
+                                    background: url(../img/myorder_bg.png) no-repeat -75px 0px;
+                                    float: right;
+                                    margin: 5px 0 0 5px;
+                                }
+                            }
+                        }
+                        .search0{
+                            display: none;
+                            border-bottom: 1px solid #EEEEEE; 
+                            padding: 6px 0px 21px 0px;
+                            width: 770px;
+                            margin-bottom: 30px;
+//                          overflow: hidden;
+                            float: left;
+//                          form{
+                                .left{
+                                    float: left;
+                                    width: 660px;
+                                    padding-left: 10px;
+                                    margin-top: 10px;
+                                    dl{
+                                        float: left;
+                                        width: 208px;
+                                        font-size: 12px;
+                                        height: 40px;
+                                        dt{
+                                            float: left;
+                                        }
+                                        dd{
+                                            float:left;
+                                            input{
+                                                width: 123px;
+                                                height: 23px;
+                                                padding: 0 0 0 3px;
+                                                border: 1px solid #ccc;
+                                            }
+                                        }
+                                    }
+                                    .select{
+                                        dd{
+                                            position: relative;
+                                            input{
+                                                background: #fff;
+                                                cursor: pointer;
+                                            }
+                                            ul{
+//                                              display: none;
+                                                position: absolute;
+                                                z-index: 9;
+                                                width: 126px;
+                                                border:1px solid #aaa;
+                                                border-top: none;
+                                                background: #fff;
+                                                li{
+                                                    font-size: 12px;
+                                                    line-height: 22px;
+                                                    cursor: pointer;
+                                                    text-indent:5px;
+                                                     
+                                                    &:hover{
+                                                        color: palegoldenrod;
+                                                        background: #000;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .dl5,.dl2{
+                                        width: 244px;
+                                    }
+                                    .dl2{
+                                        dd{
+                                            input{
+                                                width: 70px;
+                                            }
+                                        }
+                                    }
+                                    .dl5{
+                                        dd{
+                                            input{
+                                                width: 160px;
+                                            }
+                                            ul{
+                                                width: 163px;
+                                            }
+                                        }
+                                    }
+                                    
+                                }
+                                .right{
+                                    float: right;
+                                    width: 100px;
+                                    padding-top: 10px;
+                                    .sub{
+                                        width: 63px;
+                                        height: 25px;
+                                        border: 0;
+                                        background: $maincolor;
+                                        color: #fff;
+                                        font-weight: 600;
+                                        text-align: center;
+                                        line-height: 25px;
+                                        margin-right: 20px;
+                                        cursor: pointer;
+                                    }
+                                    a{
+                                        font-size:12px;
+                                        display: block;
+                                        width: 86px;
+                                        margin-top: 20px;
+                                        color: #404040;
+                                        span{
+                                            display: block;
+                                            float:right;
+                                            width: 9px;
+                                            height: 5px;
+                                            background: url(../img/myorder_bg.png) no-repeat -54px 0px;
+                                            margin-top: 5px;
+                                        }
+                                    }
+                                    
+                                }
+                                
+//                          }
+                        }
+                    }
+                    .myorderbox{
+                        table{
+                            border-collapse: collapse;
+                            font-size: 12px;
+                            thead{
+                                .form-nav{
+                                    background: #f2f2f2;
+                                    height: 33px;
+                                    td{
+                                        padding-left:20px;
+                                    }
+                                }
+                                .chose-pay{
+                                    height: 46px;
+                                    line-height: 46px;
+                                    
+                                    label{
+                                        margin-right: 10px;
+                                        .choseall{
+                                            margin-right: 6px;
+                                        }
+                                    }
+                                    .payall{
+                                        border: 1px solid #ccc;
+                                        background: #fff;
+                                        
+                                    }
+                                }
+                                
+                            }
+                            
+                            .block{
+                                tr{
+                                    td{
+                                        height:10px;
+                                    }
+                                }
+                            }
+                            
+                            tbody{
+                                border: #e7e7e7 1px solid;
+                                border-left: none;
+                                .tbody-tit{
+                                    background: #f2f2f2;
+                                    border-left: #e7e7e7 1px solid;
+                                    height: 32px;
+                                    .time{
+                                        text-align: right;
+                                        padding-right: 10px;
+                                    }
+                                    .store{
+                                        a{
+                                            color: steelblue;
+                                        }
+                                    }
+                                }
+                                .tbody-con{
+                                    border-left: #e7e7e7 1px solid;
+                                    td{
+                                        border-right: 1px solid #ccc;                                        
+                                    }
+                                    .td1{
+                                        width: 460px;
+                                        
+                                        .goods{
+                                            width: 460px;
+                                            padding: 10px 0 10px 10px;
+                                            border-bottom:#e7e7e7 1px solid;
+                                            overflow:hidden;
+                                            .goods-pic{
+                                                float: left;
+                                                img{
+                                                    width: 70px;
+                                                    height: 70px;
+                                                }
+                                                
+                                            }
+                                            .goods-text{
+                                                width: 170px;
+                                                height: 91px;
+                                                padding: 0 15px;
+                                                float: left;
+                                                h4{
+                                                    font-size: 12px;
+                                                    color: #404040;
+                                                    line-height: 22px;
+                                                    font-weight: 500;
+                                                }
+                                                p{
+                                                    color: #AAAAAA;
+                                                    line-height: 24px;
+                                                    i{
+                                                        display: block;
+                                                        float: left;
+                                                        margin-right: 7px;
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        background: url(../img/myorder_bg.png) no-repeat;
+                                                    }
+                                                    .zhi{
+                                                        background-position: 0px -24px;
+                                                    }
+                                                    .zhen{
+                                                        background-position: -23px -24px;
+                                                    }
+                                                    .zheng{
+                                                        background-position: -46px -24px;
+                                                        
+                                                    }
+                                                }
+                                            }
+                                            .solo-price{
+                                                float: left;
+                                                width: 70px;
+                                                height: 48px;
+                                                padding: 0 15px;
+                                                line-height: 24px;
+                                                .now-p{
+                                                    font-size: 16px;
+                                                    color: #AAAAAA;
+                                                }
+                                                .old-p{
+                                                    font-size: 12px;
+                                                    color: #ccc;
+                                                    text-decoration: line-through;
+                                                }
+                                            }
+                                        }
+                                        .last-goods{
+                                            border:none;
+                                        }
+                                    }
+                                    .td2{
+                                        width: 110px;
+                                        line-height: 24px;
+                                        .price{
+                                            font-size: 16px;
+                                            color: orangered;
+                                            text-align: center;
+                                        }
+                                        .kuaidi{
+                                            font-size: 12px;
+                                            color: #aaa;
+                                        }
+                                    }
+                                    .td3{
+                                        width: 78px;
+                                        padding: 0 1px 0 18px;
+                                        a{
+                                            display: block;
+                                            color: #404040;
+                                            line-height: 24px;
+                                            text-align: center;
+                                        }
+                                    }
+                                    .td4{
+                                        text-align: center;
+                                        width: 100px;
+                                        line-height: 24px;
+                                        input{
+                                            background: orangered;
+                                            color: #fff;
+                                            border: 0;
+//                                          width: ;
+//                                          display: block;
+                                        }
+                                        a{
+                                            display: inline-block;
+                                        }
+                                    }
+                                }
+                            }
+                           
+                            tfoot{
+                                .chose-pay{
+                                    height: 46px;
+                                    line-height: 46px;
+                                    td{
+                                        label{
+                                            margin-right: 10px;
+                                            .choseall{
+                                                margin-right: 6px;
+                                            }
+                                        }
+                                        .payall{
+                                            border: 1px solid #ccc;
+                                            background: #fff;
+                                        
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
