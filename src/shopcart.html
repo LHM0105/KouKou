@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>抠抠网-购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/shopcart.css"/>
+		<script src="js/requireJs.js" data-main = "js/shopcart"></script>
+	</head>
+	<body>
+		<!--从登陆页加载头部-->
+		<div id="top"></div>
+		<div id="shopcart-header">
+			<div class="logo">
+				<a href="index.html"><img src="img/shop_logo.png" /></a>
+			</div>
+			<h2>
+				<img src="img/shopcart_tit.png" />
+			</h2>
+			<div class="pic"></div>
+		</div>
+		<form action="javascript:;" method="post" name="shopcart" id="shopcart">
+			<!--购物车中的内容-->
+			<div class="shopcart-con">
+				<div class="shopcart-text">
+					<!--从后台获取-->
+					<span>全部商品（<b class="shop-num">6</b>）</span>
+				</div>
+				<div class="shopcart-tit">
+					<ul>
+						<li class="all-c">
+							<input type="checkbox" name="allchose" class="allchose" id="all"/>
+							<label for="all">全选</label>
+						</li>
+						<li class="x">商品信息</li>
+						<li class="d">单价（元）</li>
+						<li class="s">数量</li>
+						<li class="c">促销</li>
+						<li class="j">金额</li>
+						<li class="caozuo">操作</li>
+					</ul>
+				</div>
+				
+				<div class="shopcart-con0">
+					<!--购物车里的数据从后台获取-->
+					<table>
+						<thead>
+							<tr>
+								<td colspan="8">
+									<input type="checkbox" checked="checked" class="chose" name="chose" id="chose" />
+									<a href="#">恒源祥好莱购专卖店</a>
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="ischeck">
+									<input type="checkbox" name="ischecked" checked="checked" value="" id=""/>
+								</td>
+								<td class="goods-info">
+									<dl>
+										<dt>
+											<a href="#"><img src="img/s_14607024671993.jpg" /></a>
+										</dt>
+										<dd>
+											<p class="info-text">恒源祥冬季中年男士长袖衬衫保暖加绒加厚纯棉格子中老年商务衬衣</p>
+											<p class="bz">
+												<span class="jian"></span>
+												<span class="zhen"></span>
+												<span class="zheng"></span>
+											</p>
+										</dd>
+									</dl>
+								</td>
+								<td class="color-size">
+									<span>尺码：<b>155/S/95</b></span>
+									<span>颜色分类：<b>白</b></span>
+								</td>
+								<td class="price">
+									<span class="now-p">￥<b>128</b></span>
+									<span class="old-p">￥<b>223</b></span>
+								</td>
+								<td class="goods-num">
+									<div class="num-box">
+										<span class="differ"></span>
+										<input type="text" value="1" name="goods-num" class="goos-num"/>
+										<span class="add"></span>
+									</div>
+								</td>
+								<td class="cx">
+									<p>满100减30</p>
+								</td>
+								<td class="price0">
+									<!--数值由单价计算得到，js实现-->
+									<span>￥<b>128</b></span>
+								</td>
+								<td class="cz">
+									<a href="#" class="move">移入收藏夹</a>
+									<a href="#" class="delete">删除</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="ischeck">
+									<input type="checkbox" name="ischecked" checked="checked" value="" id=""/>
+								</td>
+								<td class="goods-info">
+									<dl>
+										<dt>
+											<a href="#"><img src="img/s_14607024671993.jpg" /></a>
+										</dt>
+										<dd>
+											<p class="info-text">恒源祥冬季中年男士长袖衬衫保暖加绒加厚纯棉格子中老年商务衬衣</p>
+											<p class="bz">
+												<span class="jian"></span>
+												<span class="zhen"></span>
+												<span class="zheng"></span>
+											</p>
+										</dd>
+									</dl>
+								</td>
+								<td class="color-size">
+									<span>尺码：<b>155/S/95</b></span>
+									<span>颜色分类：<b>白</b></span>
+								</td>
+								<td class="price">
+									<span class="now-p">￥<b>128</b></span>
+									<span class="old-p">￥<b>223</b></span>
+								</td>
+								<td class="goods-num">
+									<div class="num-box">
+										<span class="differ"></span>
+										<input type="text" value="1" name="goods-num" class="goos-num"/>
+										<span class="add"></span>
+									</div>
+								</td>
+								<td class="cx">
+									<p>满100减30</p>
+								</td>
+								<td class="price0">
+									<!--数值由单价计算得到，js实现-->
+									<span>￥<b>128</b></span>
+								</td>
+								<td class="cz">
+									<a href="#" class="move">移入收藏夹</a>
+									<a href="#" class="delete">删除</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="shopcar-con1">
+					<div class="con1">
+						<div class="con1-left">
+							<div class="all-ch">
+								<input type="checkbox" name="chose-all" id="chose-all" />
+								<label for="chose-all">全选</label>
+							</div>
+							<a href="#">批量删除 </a>
+							<a href="#">批量移入收藏夹</a>
+							<a href="#">消除失效商品</a>
+						</div>
+						<div class="con1-right">
+							<div class="con1-r-t">
+								<p>已选商品<span>6</span>件  合计<b>￥</b><b class="total-p">2103</b></p>
+							</div>
+							<div class="pay">
+								<input type="button" value="立即支付" id="pay" />
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!--合计-->
+			<div class="shopcart-total"></div>
+		</form>
+		<!--从登陆页加载底部-->
+		<div id="footer-out"></div>
+		<div id="footer-service"></div>
+		<div id="footer-copyright"></div>
+		<div id="footer-icon"></div>
+	</body>
+</html>

@@ -1,0 +1,336 @@
+@import "commons";
+@import "login-head";
+@import "login-foot";
+#shopcart-header{
+    width: 1000px;
+    height: 82px;
+    margin: 0 auto;
+    .logo{
+        width: 112px;
+        height: 58px;
+        float: left;
+        margin: 9px 0 15px 0;
+        a{
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    h2{
+        float: left;
+        width: 151px;
+        height: 37px;
+        margin: 31px 0 0 40px;
+    }
+    .pic{
+        float: right;
+        width: 453px;
+        height: 35px;
+        margin-top: 31px;
+        background: url(../img/shopcart_bg.png) no-repeat;
+        background-position: 0 -56px;
+    }
+}
+
+#shopcart{
+    width: 100%;
+    .shopcart-con{
+        width: 100%;
+        background: url(../img/shopcart_line.jpg) repeat-x top;
+        .shopcart-text{
+            width: 980px;
+            height: 24px;
+            padding: 20px 0 15px 20px;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+        .shopcart-tit{
+            width: 1000px;
+            height: 30px;
+            margin: 0 auto;
+            background:#000;
+            ul{
+                width: 1000px;
+                overflow: hidden;
+                li{
+                    font-size: 12px;
+                    line-height: 30px;
+                    color: #fff;
+                    float: left;
+                }
+                .all-c{
+                    width: 115px;
+                    padding-left: 20px;
+                    .allchose{
+                        float: left;
+                        margin: 8px 10px 0 0;
+                    }
+                }
+                .x{
+                    width: 340px;  
+                    padding-left: 20px;
+                }
+                .d{
+                    width: 110px;
+                }
+                .s{
+                    width: 105px;
+                }
+                .c{
+                    width: 60px;
+                    padding-left: 20px;
+                }
+                .j{
+                    width: 110px;
+                }
+                .caozuo{
+                    width: 100px;
+                }
+            }
+        }
+        .shopcart-con0{
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+            table{
+                width: 998px;
+                font-size: 12px;
+                color: #404040;
+                border: 1px solid #ccc;
+                border-bottom: none;
+                margin: 20px 0 10px 0;
+                background: #fff;
+                border-collapse: collapse;
+                thead{
+                    height: 35px;
+                    background: #eee;
+                    border-bottom:1px solid #ccc;
+                    tr{
+                        height: 35px;
+                        td{
+                            padding-left: 20px;
+                            input{
+                                float: left;   
+                                margin-right: 10px
+                            }
+                            a{
+                                float: left;
+                                color: #404040;
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        border-bottom:1px solid #ccc;
+                        td{
+                            padding: 0;
+                            margin: 0;
+                        }
+                        .ischeck{
+                            width: 60px;
+                            height: 120px;
+                            line-height: 120px;
+                            text-indent: 20px;
+                        }
+                        .goods-info{
+                            width: 300px;
+                            padding: 0;
+                            dl{
+                                height: 70px;
+//                              margin-top: 25px;
+                                dt{
+                                    float: left;
+                                    width: 70px;
+                                    height: 70px;
+                                    a{
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                                dd{
+                                    float: left;
+                                    width: 190px;
+                                    padding: 0 20px;
+                                    .info-text{
+                                        line-height: 20px;
+                                    }
+                                    .bz{
+                                        margin-top: 12px;
+                                        span{
+                                            float: left;
+                                            width: 16px;
+                                            height: 16px;
+                                            background: url(../img/shopcart_bg.png) no-repeat;
+                                            margin-right: 7px;
+                                        }
+                                        .jian{
+                                            background-position: -263px 0px;
+                                        }
+                                        .zhen{
+                                            background-position: -286px 0px;
+                                        }
+                                        .zheng{
+                                            background-position: -309px 0px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .color-size{
+                            width: 130px;
+                            padding-left: 10px;
+                            span{
+                                display: block;
+                                float: left;
+                                width: 130px;
+                                line-height: 30px;
+                            }
+                        }
+                        .price{
+                            width: 80px;
+                            padding-left: 10px;
+                            span{
+                                display: block;
+                                float: left;
+//                              width: 80px;
+                                line-height: 30px;
+                                font-size:14px;
+                            }
+                            .old-p{
+                                text-decoration: line-through;
+                                color: #aaa;
+                            }
+                            .now-p{
+                            }
+                        }
+                        .goods-num{
+                            width: 100px;
+                            padding-left: 10px;
+                            .num-box{
+                                width: 100px;
+                                height: 24px;
+                                span{
+                                    float: left;
+                                    display: block;
+                                    background: url(../img/shopcart_bg.png) no-repeat;
+                                    width: 14px;
+                                    height: 14px;
+                                    margin-top: 5px;
+                                }
+                                .differ{
+                                    background-position:0px -167px ;
+                                }
+                                .add{
+                                    background-position: -29px -167px;
+                                }
+                                input{
+                                    width: 44px;
+                                    height: 22px;
+                                    float: left;
+                                    margin: 0 4px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                        .cx{
+                            width:100px;
+                            p{
+                                font-weight: 600;
+                                color: #8E8E8E;
+                                text-align: center;
+                                font-size: 14px;
+                            }
+                        }
+                        .price0{
+                            span{
+                                font-size: 16px;
+                                color: orangered;
+                                width: 80px;
+                                padding-left: 10px;
+                                font-weight: 600;
+                                b{
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                        .cz{
+                            width: 100px;
+                            a{
+                                display: block;
+                                color: #444;
+                                text-align: center;
+                                line-height: 30px;
+                                &:hover{
+                                    color: orangered;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .shopcar-con1{
+            width: 100%;
+            height: 176px;
+            margin-top: 10px;
+            background: url(../img/shopcart_line0.jpg) repeat-x top;
+            overflow: hidden;
+            .con1{
+                width: 1000px;
+                height: 98px;
+                margin: 10px auto 0;
+                .con1-left{
+                    float: left;
+                    
+                    
+                    .all-ch{
+                        float: left;
+                        font-size: 12px;
+                        input{
+                            margin: 2px 5px 0 20px;
+                            float: left;
+                        }
+                    }
+                    a{
+                        float: left;
+                        font-size: 12px;
+                        margin: 0 20px;
+                        color: #404040;
+                    }
+                }
+                .con1-right{
+                    float: right;
+                    .con1-r-t{
+                        height: 32px;
+                        p{
+                            font-size: 12px;
+                            color: #404040;
+                            span{
+                                color: orangered;
+                            }
+                            b{
+                                color: orangered;
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .pay{
+                        input{
+                            height: 56px;
+                            width: 179px;
+                            background: orangered;
+                            color: #fff;
+                            font-size: 24px;
+                            border:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
