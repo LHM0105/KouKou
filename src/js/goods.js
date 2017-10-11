@@ -19,7 +19,7 @@ require(['jquery'], function ($) {
 //		//加载mock
 		require(['mock'], function (Mock) {
 			Mock.mock('http://g.cn', {
-				'src|130': [{	//60张图片
+				'src|138': [{	//138张图片
 			        'id|1-5': 1,//id从1开始，每次自增1
 			        'price|30-200' : 20,//30-200之间
 			    }]
@@ -32,7 +32,7 @@ require(['jquery'], function ($) {
 //			    console.log(data.src);
 				
 		      	//显示商品信息
-			    for( var i = 0;i < 60;i++){
+			    for( var i = 0;i < 13;i++){
 			    	var src = data.src[i].id + ".jpg";
 			    	var price = data.src[i].price;
 //			    	console.log(src,price);
@@ -45,32 +45,40 @@ require(['jquery'], function ($) {
 				//加载分页插件
 				require(['page'],function(){
 					console.log(data.src.length);
+					//计算分页总数
+					var length = Math.ceil(data.src.length/13);
 					//引用分页插件
 					$('.pageTest').page({
-					      leng: data.src.length/60,//分页总数
+					      leng: length,//分页总数
 					      activeClass: 'activP' , //active 类样式定义
 						    
 					      clickBack:function(page){
-					        console.log(page);//当点击的页面
-//					        if(page)
+//					        console.log(page);//当点击的页面
+					        //显示商品信息
+					        //页面中商品的第一个和最后一个的下标
+					        var sNum = (page-1) * 13;
+					        var eNum = page * 13;
+					        //如果是最后一页
+					        if(page === length){
+					        	var eNum = data.src.length;
+					        }
 					        //删除当前所有节点
-//					        $('#main-box .main').empty();
-//					        //显示商品信息
-//						    for( var i = 0;i < 60;i++){
-//						    	var src = data.src[i].id + ".jpg";
-//						    	var price = data.src[i].price;
-////			//			    	console.log(src,price);
-////						    	var obj = document.createElement('div');
-////						    	obj.className = 'goods-box';
-//						    	obj.innerHTML = '<div class="goods"><div class="goods-pic"><img src="img/'+ src +'" /></div><div class="goods-text"><p class="tit"><a href="#">裙裙欲动 欧美2015夏天气质夏裙连衣裙女</a></p><p class="store-name"><a href="#">裙裙旗舰店</a></p><p class="jia">￥<span>'+price+'</span></p></div><div class="hover-box"><a href="#" class="buy">立即购买</a><a href="#" class="shou">加入收藏</a></div></div>';
-//						    	$('#main-box .main').append(obj);
-//						    }
+					        $('#main-box .main').empty();
+					        //显示新节点
+						    for( var i = sNum;i < eNum;i++){
+						    	console.log(i);
+						    	var src = data.src[i].id + ".jpg";
+						    	var price = data.src[i].price;
+//			//			    	console.log(src,price);
+						    	var obj = document.createElement('div');
+						    	obj.className = 'goods-box';
+						    	obj.innerHTML = '<div class="goods"><div class="goods-pic"><img src="img/'+ src +'" /></div><div class="goods-text"><p class="tit"><a href="#">裙裙欲动 欧美2015夏天气质夏裙连衣裙女</a></p><p class="store-name"><a href="#">裙裙旗舰店</a></p><p class="jia">￥<span>'+price+'</span></p></div><div class="hover-box"><a href="#" class="buy">立即购买</a><a href="#" class="shou">加入收藏</a></div></div>';
+						    	$('#main-box .main').append(obj);
+						    }
 					    }
 				   });
 				});
 			});
-			
-			
 		});
 		
 		
