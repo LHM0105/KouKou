@@ -21,15 +21,11 @@ require(['jquery','js/slider'], function ($) {
 		
 		//nav菜单中向每个li右边添加小箭头
 		$('.allgoods>ul>li').append('<span class="iconfont icon-zhankai"></span><span class="iconfont icon-zhankai1"></span>');
+		var obj = document.createElement('div');
+		$(obj).addClass('moregoods');
+		obj.innerHTML = '<ul class="title"> <li>男装<span>&gt;</span></li> <li>女装<span>&gt;</span></li> <li>配件<span>&gt;</span></li> </ul> <div class="floor"> <h5>女装</h5> <div class="links"> <a href="">背心/马甲</a>|<a href="">衬衫</a>|<a href="">风衣</a>|<a href="">工装制服</a>|<a href="">夹克</a>|<a href="">棉裤</a>|<a href="">棉衣</a>|<a href="">民族服装</a>|<a href="">牛仔裤</a>|<a href="">呢大衣</a>|<a href="">Polo衫</a>|<a href="">T恤</a>|<a href="">卫衣</a>|<a href="">休闲裤</a>|<a href="">西服</a>|<a href="">西服套装</a>|<a href="">羽绒服</a>|<a href="">针织衫/毛衣</a>|<a href="">休闲裤</a>|<a href="">西服</a>|<a href="">西服套装</a>|<a href="">羽绒服</a>|<a href="">针织衫/毛衣</a> </div> </div> </div>';
 		
-//		$('.allgoods>ul>li').each(function(k,v){
-////			//向第3个后的li中添加更多链接 的div（0,1,2已经在html页面添加）
-////			??用if就报错？？？
-//			console.log(k);
-//			if(k>2){
-//				$(this).append('<div class="moregoods"><ul class="title"><li>' + $(v).children('a').eq(0).html() + '<span>&gt;</span></li><li>女装<span>&gt;</span></li><li>配件<span>&gt;</span></li></ul><div class="floor"><h5>男装</h5><div class="links"><a href="">背心/马甲</a>|<a href="">衬衫</a>|<a href="">风衣</a>|<a href="">工装制服</a>|<a href="">夹克</a>|<a href="">棉裤</a>|<a href="">棉衣</a>|<a href="">民族服装</a>|<a href="">牛仔裤</a>|<a href="">呢大衣</a>|<a href="">Polo衫</a>|<a href="">T恤</a>|<a href="">卫衣</a>|<a href="">休闲裤</a>|<a href="">西服</a>|<a href="">西服套装</a>|<a href="">羽绒服</a>|<a href="">针织衫/毛衣</a></div></div><div class="floor"><h5>女装</h5><div class="links"><a href="">背心/马甲</a>|<a href="">衬衫</a>|<a href="">风衣</a>|<a href="">工装制服</a>|<a href="">夹克</a>|<a href="">棉裤</a>|<a href="">棉衣</a>|<a href="">民族服装</a>|<a href="">牛仔裤</a>|<a href="">呢大衣</a>|<a href="">Polo衫</a>|<a href="">T恤</a>|<a href="">卫衣</a>|<a href="">休闲裤</a>|<a href="">西服</a>|<a href="">西服套装</a>|<a href="">羽绒服</a>|<a href="">针织衫/毛衣</a>|<a href="">休闲裤</a>|<a href="">西服</a>|<a href="">西服套装</a>|<a href="">羽绒服</a>|<a href="">针织衫/毛衣</a></div></div><div class="floor"><h5>配件</h5><div class="links"><a href="">背心/马甲</a>|<a href="">衬衫</a>|<a href="">风衣</a>|<a href="">工装制服</a>|<a href="">夹克</a>|<a href="">棉裤</a>|<a href="">棉衣</a>|<a href="">民族服装</a>|<a href="">牛仔裤</a></div></div></div>');
-//			}
-//		});
+		$('.allgoods ul li').not('.have').append(obj);
 		//轮播图插件
 		$('.slider').slider();
 		//trend部分

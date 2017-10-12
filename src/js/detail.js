@@ -112,8 +112,14 @@ require(['jquery'], function ($) {
 		$('#product-con').children().eq($(this).index()).css('display','block').siblings().css('display','none');
 	});
 	
+	$('#product-data-color a').add($('#product-data-size a')).click(function(){
+		$(this).addClass('chosed').siblings('a').removeClass('chosed');
+	});
 	
-	
+	$('.address-to .address-con li ul li').click(function(){
+		console.log(this);
+		$('.address-to .address-t').html($(this).children('span').html());
+	});
 	//从后台获取店铺评分信息，对应显示详细内容区域 左侧的评分
 	
 });
