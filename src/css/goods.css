@@ -646,11 +646,15 @@ input {
   margin-top: 20px;
 }
 
-.allgoods:hover > ul {
+#navbg .nav > ul .allgoods:hover > ul {
   display: block;
 }
-.allgoods > ul {
+#navbg .nav > ul .allgoods > ul {
   display: none;
+}
+#navbg .nav > ul .last {
+  border: 0;
+  width: auto;
 }
 
 #searchtop-bg {

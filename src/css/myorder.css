@@ -845,17 +845,20 @@ body {
 #myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox table tbody .tbody-con .td4 a {
   display: inline-block;
 }
-#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox table tfoot .chose-pay {
+#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox .tfoot .chose-pay {
   height: 46px;
   line-height: 46px;
 }
-#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox table tfoot .chose-pay td label {
+#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox .tfoot .chose-pay .td {
+  float: right;
+}
+#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox .tfoot .chose-pay .td label {
   margin-right: 10px;
 }
-#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox table tfoot .chose-pay td label .choseall {
+#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox .tfoot .chose-pay .td label .choseall {
   margin-right: 6px;
 }
-#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox table tfoot .chose-pay td .payall {
+#myorder-out .myorder .myorder-bottom .bot-r .myorder-con .myorderbox .tfoot .chose-pay .td .payall {
   border: 1px solid #ccc;
   background: #fff;
 }

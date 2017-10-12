@@ -18,15 +18,24 @@
         }
     }
 }
- 
-.allgoods{
-    &:hover{
+#navbg{
+    .nav{
         >ul{
-            display: block;
+            .allgoods{
+                &:hover{
+                    >ul{
+                        display: block;
+                    }
+                }
+                >ul{
+                    display: none;
+                }
+            }
+            .last{
+                border: 0;
+                width: auto;
+            }
         }
-    }
-    >ul{
-        display: none;
     }
 }
 

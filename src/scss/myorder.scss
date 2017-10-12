@@ -589,22 +589,23 @@ body{
                                 }
                             }
                            
-                            tfoot{
-                                .chose-pay{
-                                    height: 46px;
-                                    line-height: 46px;
-                                    td{
-                                        label{
-                                            margin-right: 10px;
-                                            .choseall{
-                                                margin-right: 6px;
-                                            }
+                        }
+                        .tfoot{
+                            .chose-pay{
+                                height: 46px;
+                                line-height: 46px;
+                                .td{
+                                    float:right;
+                                    label{
+                                        margin-right: 10px;
+                                        .choseall{
+                                            margin-right: 6px;
                                         }
-                                        .payall{
-                                            border: 1px solid #ccc;
-                                            background: #fff;
+                                    }
+                                    .payall{
+                                        border: 1px solid #ccc;
+                                        background: #fff;
                                         
-                                        }
                                     }
                                 }
                             }

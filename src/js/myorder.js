@@ -51,7 +51,8 @@ require(['jquery'], function ($) {
 		        'nowPrice|100-200' : 10,
 		        'oldPrice|200-300' : 10,
 		        'num|1-10' : 1,//商品数量 
-		        'color' : '@color'
+		        'color' : '颜色',
+		        'date' : '@DATETIME("yyyy-MM-dd HH:mm:ss")'
 		    }]
 		});
 		$.ajax({
@@ -69,12 +70,28 @@ require(['jquery'], function ($) {
 				});
 				$('table').append(obj);
 			}else{
+				console.log(data.goods[i]);
 				for( var i = 0;i < data.goods.length;i++){
+					//定义空白区域dom对象
+					var oBlock = document.createElement('tbody');
+					oBlock.className = 'block';
+					oBlock.innerHTML = '<tbody class="block"> <tr><td></td></tr> </tbody>';
+					//定义商品展示的dom对象
 					var obj = document.createElement('tbody');
-					obj.innerHTML = '<span></span>';
-					$('table .tb').append(obj);
+					//像dom对象添加内容
+					obj.innerHTML = '<tr class="tbody-tit"> <td colspan="2"> <input type="checkbox" name="chosed" class="chose"/> <span>订单号<b>'+ data.goods[i].date +'</b></span> </td> <td class="store" colspan="2"> <a href="#">'+ data.goods[i].shop +'</a> </td> <td class="time" colspan="3"> <span>下单时间<b>'+ data.goods[i].date +'</b></span> </td> </tr><tr class="tbody-con"> <td colspan="4" class="td1"> <div class="goods last-goods"> <div class="goods-pic"> <img src="img/'+ data.goods[i].id +'.jpg" /> </div> <div class="goods-text"> <h4>'+ data.goods[i].info +'</h4> <p> <span class="size">尺码:<b>'+ data.goods[i].size +'</b></span> <span class="color">颜色分类:<b>'+ data.goods[i].color +'</b></span> </p> <p class="icons"> <i class="zhi"></i> <i class="zhen"></i> <i class="zheng"></i> </p> </div> <div class="solo-price"> <p class="now-p">￥<span>'+ data.goods[i].nowPrice +'</span></p> <p class="old-p">￥<span>'+ data.goods[i].oldPrice +'</span></p> </div> </div> </td> <td class="td2"> <p class="price">￥<span>'+ data.goods[i].nowPrice +'</span></p> <p class="kuaidi">（含快递：<b>0.00</b>元）</p> </td> <td class="td3"> <a href="#">待付款</a> <a href="#">查看订单</a> </td> <td class="td4"> <input type="button" value="立即支付" name="paynow" /> <a href="#">取消订单</a> </td> </tr>';
+					$('table').append(oBlock);
+					$('table').append(obj);
 				}
+				
 			}
+		}).done(function(){
+			$.ajax({
+				type:"post",
+				url:"http://g.cn",
+				async:true,
+//				data:''
+			});
 		});
 			
 	});
