@@ -60,7 +60,6 @@ require(['jquery'], function ($) {
     
     		//非法字符验证
     		var re = /^\S+$/gi;
-//  		var re = /^[\u4e00-\u9fa5a-z\d]+$/gi;
     		var istrue = true;
 		    if (re.test($(this).val())) {
 		       istrue = true;

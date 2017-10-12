@@ -45,7 +45,7 @@ require(['jquery'], function ($) {
 //			    	var price = data.goods[i].price;
 			    	var obj = document.createElement('table');
 //			    	obj.className = 'goods-box';
-			    	obj.innerHTML = '<table><thead><tr><td colspan="8"><input type="checkbox" checked="checked" class="chose" name="chose" id="chose" /><a href="#">'+ data.goods[i].shop +'</a></td></tr></thead><tbody><tr><td class="ischeck"><input type="checkbox" name="ischecked" checked="checked" value="" id=""/></td><td class="goods-info"><dl><dt><a href="#"><img src="img/'+ src +'" /></a></dt><dd><p class="info-text">'+ data.goods[i].info +'</p><p class="bz"><span class="jian"></span><span class="zhen"></span><span class="zheng"></span></p></dd></dl></td><td class="color-size"> <span>尺码：<b>'+ data.goods[i].size +'</b></span> <span>颜色分类：<b>'+ data.goods[i].color +'</b></span> </td> <td class="price"><span class="now-p">￥<b>'+ data.goods[i].nowPrice +'</b></span><span class="old-p">￥<b>'+ data.goods[i].oldPrice+'</b></span></td><td class="goods-num"><div class="num-box"><span class="differ"></span><input type="text" value="1" name="goods-num" class="goos-num"/><span class="add"></span></div></td><td class="cx"><p>满100减30</p></td><td class="price0"><span>￥<b>'+ data.goods[i].nowPrice +'</b></span></td><td class="cz"><a href="#" class="move">移入收藏夹</a><a href="#" class="delete">删除</a></td></tr></tbody></table>';
+			    	obj.innerHTML = '<table><thead><tr><td colspan="8"><input type="checkbox" checked="checked" class="chose" name="chose"/><a href="#">'+ data.goods[i].shop +'</a></td></tr></thead><tbody><tr><td class="ischeck"><input type="checkbox" name="ischecked" checked="checked" value="" class="chose"/></td><td class="goods-info"><dl><dt><a href="#"><img src="img/'+ src +'" /></a></dt><dd><p class="info-text">'+ data.goods[i].info +'</p><p class="bz"><span class="jian"></span><span class="zhen"></span><span class="zheng"></span></p></dd></dl></td><td class="color-size"> <span>尺码：<b>'+ data.goods[i].size +'</b></span> <span>颜色分类：<b>'+ data.goods[i].color +'</b></span> </td> <td class="price"><span class="now-p">￥<b>'+ data.goods[i].nowPrice +'</b></span><span class="old-p">￥<b>'+ data.goods[i].oldPrice+'</b></span></td><td class="goods-num"><div class="num-box"><span class="differ"></span><input type="text" value="1" name="goods-num" class="goos-num"/><span class="add"></span></div></td><td class="cx"><p>满100减30</p></td><td class="price0"><span>￥<b>'+ data.goods[i].nowPrice +'</b></span></td><td class="cz"><a href="#" class="move">移入收藏夹</a><a href="#" class="delete">删除</a></td></tr></tbody></table>';
 			    	//追加到页面
 			    	$('#shopcart .shopcart-con .shopcart-con0').append(obj);
 			    }
@@ -61,6 +61,14 @@ require(['jquery'], function ($) {
 			    		nextNum = 1;
 			    	}
 			    	$(this).siblings('.goos-num').val(nextNum);
+			    });
+			    
+			    //选择全选
+			    $('#allchose').add($('#chose-all')).click(function(){
+			    	console.log($(this).prop('checked'));
+			    	$('.chose').prop('checked',$(this).prop('checked'));
+					$('#chose-all').prop('checked',$(this).prop('checked'));
+					$('#allchose').prop('checked',$(this).prop('checked'));
 			    });
 			});
 			

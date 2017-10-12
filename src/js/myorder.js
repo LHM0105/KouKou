@@ -83,5 +83,9 @@ require(['jquery'], function ($) {
 		$(this).addClass('hover').siblings().removeClass('hover');
 	});
 	
-	
+	//全选
+	$('.choseall').click(function(){
+		$('.chose').prop('checked',$(this).prop('checked'));
+		$('.choseall').prop('checked',$(this).prop('checked'));
+	});
 });
