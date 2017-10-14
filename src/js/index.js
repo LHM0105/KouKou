@@ -15,9 +15,7 @@ require.config({
 require(['jquery','js/slider'], function ($) {
 	$(function(){
 		//加载顶部以及导航栏的js
-		require(['js/index-top'],function($){
-			console.log('加载index.js');
-		});
+		require(['js/index-top'],function($){});
 		
 		//nav菜单中向每个li右边添加小箭头
 		$('.allgoods>ul>li').append('<span class="iconfont icon-zhankai"></span><span class="iconfont icon-zhankai1"></span>');

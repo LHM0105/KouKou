@@ -42,7 +42,7 @@ require(['jquery'], function ($) {
 //			    	console.log(src,price);
 			    	var obj = document.createElement('div');
 			    	obj.className = 'goods-box';
-			    	obj.innerHTML = '<div class="goods"><div class="goods-pic"><img src="img/'+ src +'" /></div><div class="goods-text"><p class="tit"><a href="#">裙裙欲动 欧美2015夏天气质夏裙连衣裙女</a></p><p class="store-name"><a href="#">裙裙旗舰店</a></p><p class="jia">￥<span>'+price+'</span></p></div><div class="hover-box"><a href="#" class="buy">立即购买</a><a href="#" class="shou">加入收藏</a></div></div>';
+			    	obj.innerHTML = '<div class="goods"><div class="goods-pic"><img src="img/'+ src +'" /></div><div class="goods-text"><p class="tit"><a href="#">裙裙欲动 欧美2015夏天气质夏裙连衣裙女</a></p><p class="store-name"><a href="#">裙裙旗舰店</a></p><p class="jia">￥<span>'+price+'</span></p></div><a href="detail.html" class="hover-box"><a href="#" class="buy">立即购买</a><a href="#" class="shou">加入收藏</a></a></div>';
 			    	$('#main-box .main').append(obj);
 			    }
 				
