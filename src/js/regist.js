@@ -110,12 +110,13 @@ require(['jquery'], function ($) {
 		
 		//密码
 		// 密码强弱
-		
+		var boolDisable = true; 
+		var E;
 		//密码输入框值改变时
 		$('.mima #psw').on('input',function(){
 			var H = $('.mima #psw').val();
 			var D = H.length;//密码长度
-	        var E;
+	        
 	        if(D == 1){ // 输入一个字符的时候
 	            E=-13;    // 显示一个 强度
 	        }
@@ -136,22 +137,25 @@ require(['jquery'], function ($) {
 	        }
 	        var zm = /^[A-Za-z]+$/;
 	        if(zm.test(H)  &&  D>=7){  // 纯字母 时
-	
+//				boolDisable = false;
 	            E=-53;  // 5个 强度
 	        }
 	        var zh = /[A-Za-z]+[0-9]+/;
 	        if(zh.test(H)  &&  D>=7){   // 字母 加 数字  时
 	            E=-90;
+	            boolDisable = false;
 	        }
 	        var n_z = /[0-9]+[A-Za-z]+/;
 	        if(n_z.test(H)  &&  D>=7){  //  数字 加 字母  时
 	            E=-90;
+	            boolDisable = false;
 	        }
 	        //  字母 + 特殊符号 +  字母
 	        var z_m = /(^[A-Za-z]+)([^A-Za-z0-9]+)([A-Za-z]+)$/;
 	
 	        if(z_m.test(H) && D>=7){
 	           E=-110;
+	            boolDisable = false;
 	        }
 	        //  字母 + 特殊符号
 	
@@ -159,12 +163,14 @@ require(['jquery'], function ($) {
 	
 	        if(t_s_z.test(H)  && D>=7 ){
 	            E=-116;
+	             boolDisable = false;
 	        }
 	
 	        //  数字 + 特殊符号 +  数字
 	        var sz_t = /(^[\d]+)([^A-Za-z0-9]+)([\d]+)$/;
 	        if(sz_t.test(H)  && D>=7 ){
 	            E=-130
+	             boolDisable = false;
 	        }
 	
 	        //  数字 + 特殊符号
@@ -172,6 +178,7 @@ require(['jquery'], function ($) {
 	
 	        if(sz_ts.test(H)  && D>=7 ){
 	            E=-90;
+	             boolDisable = false;
 	        }
 	
 	        // 特殊符号 +  数字
@@ -179,23 +186,29 @@ require(['jquery'], function ($) {
 	
 	        if(ts_sz.test(H)  && D>=7){
 	            E=-103
+	             boolDisable = false;
 	        }
 	        // 特殊符号 +  字母
 	        var ts_zu = /(^[^A-Za-z0-9]+)([A-Za-z]+)$/;
 	        if(ts_zu.test(H)  && D>=7){
 	            E=-116
+	             boolDisable = false;
 	        }
 	        // 字母 + 数字 + 特殊符号
 	        var gh = /(?=.*[\d]+)(?=.*[A-Za-z]+)(?=.*[^A-Za-z0-9]+)/;
 		    if(gh.test(H)  && D>=7){
 		        E=-130
+		        boolDisable = false; 
 		    }
+		    //改变确认密码框是否可用
+			$('.psw-sure #psw-s').prop('disabled',boolDisable);
 			
 			$('.pswStrenthDiv').css('background-position-y',E);
 		});
 		
+		var boolDisable = true; 
 		//确认密码输入框默认不可用
-		$('.psw-sure #psw-s').prop('disabled',true);
+		$('.psw-sure #psw-s').prop('disabled',boolDisable);
 		
 		//判断密码
 		//获取焦点
@@ -224,18 +237,27 @@ require(['jquery'], function ($) {
 				//密码为空
 				$('.mima .tishi').css('display','none');
 				$('.mima .warn-psw-repeat').css('display','block');
-			}else{
+			}else if(-E>53){
 				//验证成功
 				$('.mima .tishi').css('display','none');
 				$('.mima .ok').css('display','block');
 				$(this).css('border-color','#d0d0d0');
+				var boolDisable = false; 
 				//打开 确认密码输入框
-				$('.psw-sure #psw-s').prop('disabled',false);
+				$('.psw-sure #psw-s').prop('disabled',boolDisable);
 			}
 			
 		});
+		$('.psw-sure label').mouseover(function(){
+			//打开 确认密码输入框
+			if(!boolDisable){
+				console.log(boolDisable)
+				$('.psw-sure #psw-s').prop('disabled',boolDisable);
+			}
+		})
 		//确认密码框获取焦点
 		$('.psw-sure #psw-s').focus(function(){
+			
 			$(this).css('background','#fff');
 		});
 		

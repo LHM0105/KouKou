@@ -5,7 +5,8 @@ var minifyhtml = require('gulp-htmlmin');
 var minifycss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect');
-var sass = require('gulp-ruby-sass');
+var sass = require('gulp-sass');
+//var sass = require('gulp-ruby-sass');
 var imagemin = require('gulp-imagemin');
 //使用mock
 //var Mock = require('mockjs');

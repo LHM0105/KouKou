@@ -67,7 +67,8 @@ require(['jquery'], function ($) {
 							if(true){
 								//提示登陆
 								alert('登陆成功');
-								//将当前登陆了的用户信息（id，用户名等需要的）存到cookie，以便在另一个页面调用
+								//将当前登陆了的用户信息（id，用户名等需要的）存到localStorage，以便在另一个页面调用
+								localStorage.setItem('kkLoginUsername',username);
 								//跳转到主页面
 								$(window).attr('location','index.html');
 							}else{
@@ -76,8 +77,9 @@ require(['jquery'], function ($) {
 								//账号或密码错误
 							}
 						},
+						
 						error:function(data){
-							alert('登陆失败');
+							alert('由于一股神秘的力量，登陆失败了');
 							
 						}
 					});
