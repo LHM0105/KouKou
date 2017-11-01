@@ -1,1 +1,108 @@
-#top{width:100%;height:25px;background:#666}#top .top-con{width:1000px;height:26px;margin:0 auto}#top .top-con .top-left{float:left;color:#fff;font-size:12px;line-height:25px}#top .top-con .top-left span{margin:0 6px}#top .top-con .top-left a{color:#fff}#top .top-con .top-right{float:right;color:#fff;font-size:12px}#top .top-con .top-right li{float:left;height:25px;line-height:25px;margin:0 10px}#top .top-con .top-right li a{float:right;color:#fff}#top .top-con .top-right li a .home-icon{display:inline-block;width:20px;height:12px;background:url(../img/index_bg.png) no-repeat;background-position:0 0}#top .top-con .top-right li a .myclo-icon{display:inline-block;width:14px;height:12px;margin-left:4px;background:url(../img/index_bg.png) no-repeat;background-position:-380px -160px}#top .top-con .top-right li a:hover{text-decoration:underline}#top .top-con .top-right li a:hover .myclo-icon{background-position:-365px -158px}#top .top-con .top-right .ewm-link{position:relative}#top .top-con .top-right .ewm-link .ewm-box{display:none;width:196px;height:210px;background:url(../img/index_bg.png) no-repeat -606px -209px;position:absolute;top:25px;left:-100px;z-index:4}#top .top-con .top-right .ewm-link .ewm-box img{width:146px;height:146px;margin:30px 0 0 24px}#top .top-con .top-right .ewm-link:hover .ewm-box{display:block}#top .top-con .top-right .collect,#top .top-con .top-right .myKK{position:relative}#top .top-con .top-right .collect ul,#top .top-con .top-right .myKK ul{display:none;position:absolute;top:25px;background:#666;z-index:3}#top .top-con .top-right .collect ul li,#top .top-con .top-right .myKK ul li{margin:0;width:100%;border-bottom:1px solid #ccc;text-align:center;height:30px;line-height:30px}#top .top-con .top-right .collect ul li a,#top .top-con .top-right .myKK ul li a{float:none}#top .top-con .top-right .collect:hover ul,#top .top-con .top-right .myKK:hover ul{display:block}#top .top-con .top-right .app-icon{padding:0 15px;background:url(../img/index_bg.png) no-repeat;background-position:-270px 0}#logo-out{width:100%;height:82px;border-bottom:3px solid #000}#logo-out .logo-con{width:1000px;height:82px;margin:0 auto}#logo-out .logo-con .logo-left{float:left;height:82px;width:100px}#logo-out .logo-con .logo-left a{float:left;height:72px;padding-top:10px}#logo-out .logo-con .logo-right{float:right;width:100px;height:82px;line-height:100px}
+#top {
+  width: 100%;
+  height: 25px;
+  background: #666666; }
+  #top .top-con {
+    width: 1000px;
+    height: 26px;
+    margin: 0 auto; }
+    #top .top-con .top-left {
+      float: left;
+      color: #fff;
+      font-size: 12px;
+      line-height: 25px; }
+      #top .top-con .top-left span {
+        margin: 0 6px; }
+      #top .top-con .top-left a {
+        color: #fff; }
+    #top .top-con .top-right {
+      float: right;
+      color: #fff;
+      font-size: 12px; }
+      #top .top-con .top-right li {
+        float: left;
+        height: 25px;
+        line-height: 25px;
+        margin: 0 10px; }
+        #top .top-con .top-right li a {
+          float: right;
+          color: #fff; }
+          #top .top-con .top-right li a .home-icon {
+            display: inline-block;
+            width: 20px;
+            height: 12px;
+            background: url(../img/index_bg.png) no-repeat;
+            background-position: 0 0; }
+          #top .top-con .top-right li a .myclo-icon {
+            display: inline-block;
+            width: 14px;
+            height: 12px;
+            margin-left: 4px;
+            background: url(../img/index_bg.png) no-repeat;
+            background-position: -380px -160px; }
+          #top .top-con .top-right li a:hover {
+            text-decoration: underline; }
+            #top .top-con .top-right li a:hover .myclo-icon {
+              background-position: -365px -158px; }
+      #top .top-con .top-right .ewm-link {
+        position: relative; }
+        #top .top-con .top-right .ewm-link .ewm-box {
+          display: none;
+          width: 196px;
+          height: 210px;
+          background: url(../img/index_bg.png) no-repeat -606px -209px;
+          position: absolute;
+          top: 25px;
+          left: -100px;
+          z-index: 4; }
+          #top .top-con .top-right .ewm-link .ewm-box img {
+            width: 146px;
+            height: 146px;
+            margin: 30px 0px 0px 24px; }
+        #top .top-con .top-right .ewm-link:hover .ewm-box {
+          display: block; }
+      #top .top-con .top-right .myKK, #top .top-con .top-right .collect {
+        position: relative; }
+        #top .top-con .top-right .myKK ul, #top .top-con .top-right .collect ul {
+          display: none;
+          position: absolute;
+          top: 25px;
+          background: #666;
+          z-index: 3; }
+          #top .top-con .top-right .myKK ul li, #top .top-con .top-right .collect ul li {
+            margin: 0;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            height: 30px;
+            line-height: 30px; }
+            #top .top-con .top-right .myKK ul li a, #top .top-con .top-right .collect ul li a {
+              float: none; }
+        #top .top-con .top-right .myKK:hover ul, #top .top-con .top-right .collect:hover ul {
+          display: block; }
+      #top .top-con .top-right .app-icon {
+        padding: 0 15px;
+        background: url(../img/index_bg.png) no-repeat;
+        background-position: -270px 0; }
+
+#logo-out {
+  width: 100%;
+  height: 82px;
+  border-bottom: 3px solid #000; }
+  #logo-out .logo-con {
+    width: 1000px;
+    height: 82px;
+    margin: 0 auto; }
+    #logo-out .logo-con .logo-left {
+      float: left;
+      height: 82px;
+      width: 100px; }
+      #logo-out .logo-con .logo-left a {
+        float: left;
+        height: 72px;
+        padding-top: 10px; }
+    #logo-out .logo-con .logo-right {
+      float: right;
+      width: 100px;
+      height: 82px;
+      line-height: 100px; }

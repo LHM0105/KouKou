@@ -27,34 +27,42 @@ gulp.task('rename',function(){
 
 //新建压缩重命名js文件的任务
 gulp.task('minifyJS',function(){
-	return gulp.src('./src/js/login.js').
+	return gulp.src('./src/js/*.js').
 	pipe(uglify()).
 	pipe(gulp.dest('./dist/js'));
 });
 
 //新建一个压缩html文件的任务(不压缩也可以，主要是压缩css和js)
 gulp.task('minifyHTML',function(){
-	return gulp.src('./src/login.html')
+	return gulp.src('./src/*.html')
 	.pipe(minifyhtml({
 		collapseWhitespace: true
 	}))
 	.pipe(gulp.dest('./dist'));
 });
+////操作sass文件并且压缩到dist中
+//gulp.task('minifySCSS',function(){
+//	return sass('./src/scss/*.scss',{
+//		style: 'compressed'
+//	}).pipe(minifycss())
+//	.pipe(gulp.dest('./dist/css'));
+//});
+
+////把scss转为css文件(放在源文件中)
+//gulp.task('compileSCSS',function(){
+//	return sass('./src/scss/*.scss',{
+//		style: 'expanded'
+//	}).pipe(gulp.dest('./src/css'));
+//});
+
 //操作sass文件并且压缩到dist中
 gulp.task('minifySCSS',function(){
-	return sass('./src/scss/login.scss',{
-		style: 'compressed'
-	}).pipe(minifycss())
-	.pipe(gulp.dest('./dist/css'));
+   return gulp.src("src/scss/*.scss").pipe(sass()).pipe(gulp.dest("dist/css"))
 });
-
-//把scss转为css文件(放在源文件中)
+//操作sass文件，转为css放在源文件中
 gulp.task('compileSCSS',function(){
-	return sass('./src/scss/login.scss',{
-		style: 'expanded'
-	}).pipe(gulp.dest('./src/css'));
-});
-
+	return gulp.src("src/scss/*.scss").pipe(sass()).pipe(gulp.dest("dist/css"))
+})
 //压缩图片
 gulp.task('minifyIMG',function(){
 	return gulp.src('./src/img/*.*')
@@ -80,5 +88,5 @@ gulp.task('default',["minifyJS","minifySCSS",'minifyHTML','compileSCSS'],functio
 		livereload:true
 	});
 
-	gulp.watch(['./src/js/login.js','./src/scss/login.scss','./src/login.html','./src/scss/login.scss'],['reload']);
+	gulp.watch(['./src/js/*.js','./src/scss/*.scss','./src/*.html','./src/scss/*.scss'],['reload']);
 });
